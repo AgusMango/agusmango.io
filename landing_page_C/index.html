@@ -1,0 +1,1166 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanguardia Asesores | Asesoría Comercial & Rentabilidad</title>
+  <meta name="description" content="Carpetas de archivo sobre la mesa: Asesoramiento comercial integral, análisis desde 0, de negocio y de producto. Coordinamos una visita presencial.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>📁</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#0f172a',
+            },
+            accent: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            handwriting: ['Caveat', 'cursive'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Styles: Carpetas de archivo sobre la mesa de trabajo -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="desk-canvas selection:bg-amber-600 selection:text-white">
+
+  <!-- =========================================================================
+       1. ENTORNO DE LA MESA (DESK WORKSPACE)
+       Espacio seguro sobre la madera:
+       - En PC: evita la esquina superior izquierda (donde están la taza de té y los papeles)
+       - En Móvil: evita la esquina superior derecha (donde está la notebook)
+       ========================================================================= -->
+  <div class="relative min-h-screen lg:h-screen lg:overflow-hidden">
+    
+    <!-- =========================================================================
+         2. VISTA EN PC (DESKTOP): 6 CUADRANTES SOBRE LA MESA (2 DE ALTO × 3 DE ANCHO)
+         Anclados al fondo de la mesa a 100vh sin scroll innecesario.
+         - Cuadrante 1 (Arriba Izq): Papel con logo y membrete + Post-it WhatsApp
+         - Cuadrante 2 (Arriba Medio): Carpeta 01 (Inicio) - con offset para no tapar la taza de té
+         - Cuadrante 3 (Arriba Der): Carpeta 02 (Servicios & Contratos)
+         - Cuadrante 4 (Abajo Izq): Carpeta 03 (Reseñas de Clientes)
+         - Cuadrante 5 (Abajo Medio): Carpeta 04 (¿Cómo Trabajamos?)
+         - Cuadrante 6 (Abajo Der): Carpeta 05 (Contacto & Visita)
+         ========================================================================= -->
+    <div id="desktop-desk-viewport" class="hidden lg:block fixed inset-0 w-full h-full overflow-hidden z-10 pointer-events-auto">
+      <div id="desktop-desk-canvas" class="w-full h-full min-h-[660px] grid grid-cols-3 grid-rows-2 p-6 xl:p-8 2xl:p-12 gap-x-6 xl:gap-x-10 2xl:gap-x-14 gap-y-4 xl:gap-y-6 box-border pb-24">
+        
+        <!-- CUADRANTE 1: ARRIBA A LA IZQUIERDA (Papel Membretado Oficial + Post-it WhatsApp) -->
+        <div class="flex flex-col justify-center items-start gap-4 pl-4 xl:pl-8">
+          <!-- Papel Membretado Oficial con Logo y Nombre (formato amplio y cuadrado) -->
+          <div class="folder-label-card p-6 xl:p-7 rounded-sm max-w-[420px] xl:max-w-[460px] w-full shadow-xl border border-stone-300 transform -rotate-1 hover:rotate-0 transition-transform flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-3">
+                <div class="flex items-center gap-3">
+                  <div class="w-11 h-11 rounded-lg bg-gradient-to-tr from-slate-900 to-brand-700 flex items-center justify-center text-white shadow-md">
+                    <i class="fa-solid fa-chart-line text-xl text-sky-400"></i>
+                  </div>
+                  <div>
+                    <span class="font-extrabold text-2xl tracking-tight text-slate-900">
+                      Vanguardia<span class="text-brand-600">.</span>
+                    </span>
+                    <span class="block text-[10px] uppercase tracking-widest text-slate-500 font-bold -mt-0.5">
+                      Asesoría Comercial & Rentabilidad
+                    </span>
+                  </div>
+                </div>
+                <div class="rubber-stamp stamp-blue text-[10px]">
+                  Estudio Oficial
+                </div>
+              </div>
+              <p class="text-xs text-slate-600 leading-relaxed mb-3">
+                Consultoría estratégica de negocios, auditoría financiera comercial y contratos adaptados a tu etapa actual.
+              </p>
+            </div>
+            <div class="mt-2 text-[11px] text-slate-600 font-medium italic border-t border-slate-100 pt-2 flex items-center justify-between">
+              <span>“Haciendo rentable tu idea o negocio.”</span>
+              <span class="font-semibold text-slate-500">Rosario, SF</span>
+            </div>
+          </div>
+
+          <!-- Nota adhesiva rápida de WhatsApp -->
+          <div class="sticky-note p-4 xl:p-5 rounded-sm shadow-lg transform rotate-2 hover:rotate-0 transition-transform max-w-[420px] xl:max-w-[460px] w-full flex items-center justify-between gap-4 relative">
+            <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 w-24"></div>
+            <div>
+              <div class="text-[10px] font-extrabold uppercase tracking-wider text-amber-900">
+                ¿Coordinar Visita?
+              </div>
+              <div class="text-xs xl:text-sm font-bold text-amber-950">
+                Escribinos por WhatsApp
+              </div>
+            </div>
+            <a href="https://wa.me/5493411111111?text=Hola,%20me%20comunico%20desde%20la%20mesa%20de%20carpetas%20para%20coordinar%20una%20visita" target="_blank" rel="noopener" class="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs xl:text-sm flex items-center gap-2 shadow-sm whitespace-nowrap transition-colors">
+              <i class="fa-brands fa-whatsapp text-base"></i>
+              <span>341 111 1111</span>
+            </a>
+          </div>
+        </div>
+
+        <!-- CUADRANTE 2: ARRIBA AL MEDIO (Carpeta 01: Inicio - Cuidado con la taza de té en la parte superior) -->
+        <div class="flex flex-col justify-end items-center pb-2 pt-16 xl:pt-24">
+          <div class="file-folder desktop-file-folder folder-scatter-0 p-6 xl:p-7 w-full max-w-[420px] xl:max-w-[460px] 2xl:max-w-[490px] cursor-pointer" data-folder-index="0" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>01. INICIO</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-4 xl:pl-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-chart-line text-brand-700 text-sm"></i>
+                    <span class="font-extrabold text-xs uppercase tracking-tight">Vanguardia Asesores</span>
+                  </div>
+                  <div class="rubber-stamp stamp-emerald text-[10px] py-0.5 px-2">Rentabilidad</div>
+                </div>
+                <h3 class="text-2xl xl:text-[26px] font-black text-slate-900 tracking-tight leading-snug mb-1.5">Inicio</h3>
+                <p class="text-xs xl:text-sm font-bold text-slate-800 italic mb-2.5">“Haciendo rentable tu idea o negocio.”</p>
+                <p class="text-xs xl:text-[13px] text-slate-600 leading-relaxed mb-3">Manifiesto comercial, diagnóstico presencial in-situ, auditoría sin humo y métricas de rentabilidad directa.</p>
+                
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/5 border border-amber-900/10 text-[11px] font-semibold text-slate-700 mb-2">
+                  <i class="fa-solid fa-check text-emerald-600 text-[10px]"></i>
+                  <span>Auditoría in-situ & métricas reales</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3 border-t border-amber-900/15 text-xs xl:text-sm font-bold text-brand-800 mt-2">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Abrir carpeta</span></span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUADRANTE 3: ARRIBA A LA DERECHA (Carpeta 02: Servicios & Contratos) -->
+        <div class="flex flex-col justify-center items-end pr-4 xl:pr-8">
+          <div class="file-folder desktop-file-folder folder-scatter-1 p-6 xl:p-7 w-full max-w-[420px] xl:max-w-[460px] 2xl:max-w-[490px] cursor-pointer" data-folder-index="1" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>02. CONTRATOS</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-4 xl:pl-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-chart-line text-brand-700 text-sm"></i>
+                    <span class="font-extrabold text-xs uppercase tracking-tight">Vanguardia Asesores</span>
+                  </div>
+                  <div class="rubber-stamp stamp-blue text-[10px] py-0.5 px-2">Contratos</div>
+                </div>
+                <h3 class="text-2xl xl:text-[26px] font-black text-slate-900 tracking-tight leading-snug mb-1.5">Servicios & Contratos</h3>
+                <p class="text-xs xl:text-sm font-bold text-slate-800 italic mb-2.5">“Distintos contratos para tu etapa actual.”</p>
+                <p class="text-xs xl:text-[13px] text-slate-600 leading-relaxed mb-3">Planes flexibles: Análisis desde 0, Análisis de negocio (Más solicitado) y Análisis de producto.</p>
+                
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/5 border border-amber-900/10 text-[11px] font-semibold text-slate-700 mb-2">
+                  <i class="fa-solid fa-check text-sky-600 text-[10px]"></i>
+                  <span>3 modalidades de contratación adaptadas</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3 border-t border-amber-900/15 text-xs xl:text-sm font-bold text-brand-800 mt-2">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Ver modalidades</span></span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUADRANTE 4: ABAJO A LA IZQUIERDA (Carpeta 03: Reseñas de Clientes) -->
+        <div class="flex flex-col justify-center items-start pl-4 xl:pl-8">
+          <div class="file-folder desktop-file-folder folder-scatter-2 p-6 xl:p-7 w-full max-w-[420px] xl:max-w-[460px] 2xl:max-w-[490px] cursor-pointer" data-folder-index="2" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>03. RESEÑAS</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-4 xl:pl-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-chart-line text-brand-700 text-sm"></i>
+                    <span class="font-extrabold text-xs uppercase tracking-tight">Vanguardia Asesores</span>
+                  </div>
+                  <div class="rubber-stamp stamp-red text-[10px] py-0.5 px-2">Google 4.9★</div>
+                </div>
+                <h3 class="text-2xl xl:text-[26px] font-black text-slate-900 tracking-tight leading-snug mb-1.5">Reseñas de Clientes</h3>
+                <p class="text-xs xl:text-sm font-bold text-slate-800 italic mb-2.5">“Lo que opinan nuestros clientes.”</p>
+                <p class="text-xs xl:text-[13px] text-slate-600 leading-relaxed mb-3">Experiencias reales y verificadas de comerciantes, fundadores y directores de empresas asesoradas.</p>
+                
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/5 border border-amber-900/10 text-[11px] font-semibold text-slate-700 mb-2">
+                  <i class="fa-solid fa-star text-amber-500 text-[10px]"></i>
+                  <span>Calificación 4.9★ con reseñas de Google</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3 border-t border-amber-900/15 text-xs xl:text-sm font-bold text-brand-800 mt-2">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Leer opiniones</span></span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUADRANTE 5: ABAJO AL MEDIO (Carpeta 04: ¿Cómo Trabajamos?) -->
+        <div class="flex flex-col justify-center items-center">
+          <div class="file-folder desktop-file-folder folder-scatter-3 p-6 xl:p-7 w-full max-w-[420px] xl:max-w-[460px] 2xl:max-w-[490px] cursor-pointer" data-folder-index="3" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>04. METODOLOGÍA</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-4 xl:pl-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-chart-line text-brand-700 text-sm"></i>
+                    <span class="font-extrabold text-xs uppercase tracking-tight">Vanguardia Asesores</span>
+                  </div>
+                  <div class="rubber-stamp stamp-emerald text-[10px] py-0.5 px-2">Paso a Paso</div>
+                </div>
+                <h3 class="text-2xl xl:text-[26px] font-black text-slate-900 tracking-tight leading-snug mb-1.5">¿Cómo Trabajamos?</h3>
+                <p class="text-xs xl:text-sm font-bold text-slate-800 italic mb-2.5">“Coordinamos una visita presencial.”</p>
+                <p class="text-xs xl:text-[13px] text-slate-600 leading-relaxed mb-3">El proceso en 4 etapas: Contacto inicial, coordinación, diagnóstico y ejecución con resultados medibles.</p>
+                
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/5 border border-amber-900/10 text-[11px] font-semibold text-slate-700 mb-2">
+                  <i class="fa-solid fa-check text-emerald-600 text-[10px]"></i>
+                  <span>Metodología ágil sin tecnicismos vacíos</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3 border-t border-amber-900/15 text-xs xl:text-sm font-bold text-brand-800 mt-2">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Ver metodología</span></span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- CUADRANTE 6: ABAJO A LA DERECHA (Carpeta 05: Contacto & Visita) -->
+        <div class="flex flex-col justify-center items-end pr-4 xl:pr-8">
+          <div class="file-folder desktop-file-folder folder-scatter-4 p-6 xl:p-7 w-full max-w-[420px] xl:max-w-[460px] 2xl:max-w-[490px] cursor-pointer" data-folder-index="4" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>05. CONTACTO</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-4 xl:pl-5 flex-1 flex flex-col justify-between">
+              <div>
+                <div class="flex items-center justify-between mb-3.5">
+                  <div class="flex items-center gap-2 text-slate-800">
+                    <i class="fa-solid fa-chart-line text-brand-700 text-sm"></i>
+                    <span class="font-extrabold text-xs uppercase tracking-tight">Vanguardia Asesores</span>
+                  </div>
+                  <div class="rubber-stamp stamp-red text-[10px] py-0.5 px-2">Directo</div>
+                </div>
+                <h3 class="text-2xl xl:text-[26px] font-black text-slate-900 tracking-tight leading-snug mb-1.5">Contacto & Visita</h3>
+                <p class="text-xs xl:text-sm font-bold text-slate-800 italic mb-2.5">“Hablemos de los números de tu negocio.”</p>
+                <p class="text-xs xl:text-[13px] text-slate-600 leading-relaxed mb-3">Mesa de entrada: formulario de contacto con Web3Forms, teléfono 341 111 1111 y canales oficiales.</p>
+                
+                <div class="inline-flex items-center gap-2 px-2.5 py-1 rounded bg-amber-900/5 border border-amber-900/10 text-[11px] font-semibold text-slate-700 mb-2">
+                  <i class="fa-solid fa-phone text-rose-600 text-[10px]"></i>
+                  <span>Coordinación presencial directa en Rosario</span>
+                </div>
+              </div>
+
+              <div class="flex items-center justify-between pt-3 border-t border-amber-900/15 text-xs xl:text-sm font-bold text-brand-800 mt-2">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Contactar ahora</span></span>
+                <i class="fa-solid fa-arrow-right text-[11px]"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- =========================================================================
+         VISTA EN MÓVIL (MOBILE): Mazo de carpetas apiladas con pase de página al deslizar
+         (Se mantiene exactamente igual como requested: "En el telefono quedó bien, no cambies eso")
+         ========================================================================= -->
+    <div class="block lg:hidden max-w-md mx-auto px-4 pt-6 pb-28">
+      
+      <!-- Encabezado / Papel con logo y Sticky de WhatsApp en móvil -->
+      <div class="mb-6 space-y-4">
+        <!-- Papel Membretado Oficial -->
+        <div class="folder-label-card p-4 rounded-sm w-full shadow-lg border border-stone-300 transform -rotate-1">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2.5">
+              <div class="w-9 h-9 rounded-lg bg-gradient-to-tr from-slate-900 to-brand-700 flex items-center justify-center text-white shadow-md">
+                <i class="fa-solid fa-chart-line text-base text-sky-400"></i>
+              </div>
+              <div>
+                <span class="font-extrabold text-lg tracking-tight text-slate-900">
+                  Vanguardia<span class="text-brand-600">.</span>
+                </span>
+                <span class="block text-[9px] uppercase tracking-widest text-slate-500 font-bold -mt-0.5">
+                  Asesoría Comercial & Rentabilidad
+                </span>
+              </div>
+            </div>
+            <div class="rubber-stamp stamp-blue text-[9px] py-0.5 px-1.5">
+              Estudio Oficial
+            </div>
+          </div>
+          <div class="mt-2 text-[10px] text-slate-600 font-medium italic border-t border-slate-100 pt-1.5 flex items-center justify-between">
+            <span>“Haciendo rentable tu idea o negocio.”</span>
+            <span class="font-semibold text-slate-500">Rosario, SF</span>
+          </div>
+        </div>
+
+        <!-- Nota adhesiva WhatsApp -->
+        <div class="sticky-note p-3 rounded-sm shadow-md transform rotate-1 w-full flex items-center justify-between gap-3 relative">
+          <div class="masking-tape -top-3 left-1/2 -translate-x-1/2 w-16"></div>
+          <div>
+            <div class="text-[9px] font-extrabold uppercase tracking-wider text-amber-900">
+              ¿Coordinar Visita?
+            </div>
+            <div class="text-xs font-bold text-amber-950">
+              Escribinos por WhatsApp
+            </div>
+          </div>
+          <a href="https://wa.me/5493411111111?text=Hola,%20me%20comunico%20desde%20la%20mesa%20de%20carpetas%20para%20coordinar%20una%20visita" target="_blank" rel="noopener" class="px-3 py-1.5 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white font-bold text-xs flex items-center gap-1.5 shadow-sm whitespace-nowrap transition-colors">
+            <i class="fa-brands fa-whatsapp text-sm"></i>
+            <span>341 111 1111</span>
+          </a>
+        </div>
+      </div>
+        
+        <!-- Indicador de gesto de pase de página -->
+        <div class="flex items-center justify-center gap-2 mb-5 text-[11px] font-bold text-amber-100 bg-slate-950/70 backdrop-blur-md px-4 py-1.5 rounded-full mx-auto w-fit border border-white/15 shadow-md">
+          <i class="fa-solid fa-arrows-left-right text-amber-400"></i>
+          <span>Deslizá hacia los lados para pasar de carpeta</span>
+        </div>
+
+        <!-- Mazo de carpetas apiladas -->
+        <div id="mobile-folder-stack" class="mobile-folder-stack-wrapper cursor-grab active:cursor-grabbing">
+          
+          <!-- CARPETA 01: INICIO (Móvil) -->
+          <div class="file-folder mobile-stack-card stack-pos-0 p-5 sm:p-6" data-folder-index="0" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>01. INICIO</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-3.5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-extrabold text-[11px] uppercase tracking-tight text-slate-800">Vanguardia Asesores</span>
+                <div class="rubber-stamp stamp-emerald text-[9px] py-0.5 px-1.5">Rentabilidad</div>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight leading-snug mb-1">Inicio</h3>
+              <p class="text-xs font-bold text-slate-800 italic mb-2">“Haciendo rentable tu idea o negocio.”</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed mb-4 line-clamp-2">Manifiesto comercial, diagnóstico presencial in-situ, auditoría sin humo y métricas.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-amber-900/15 text-xs font-bold text-brand-800">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Abrir carpeta</span></span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARPETA 02: SERVICIOS & CONTRATOS (Móvil) -->
+          <div class="file-folder mobile-stack-card stack-pos-1 p-5 sm:p-6" data-folder-index="1" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>02. CONTRATOS</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-3.5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-extrabold text-[11px] uppercase tracking-tight text-slate-800">Vanguardia Asesores</span>
+                <div class="rubber-stamp stamp-blue text-[9px] py-0.5 px-1.5">Contratos</div>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight leading-snug mb-1">Servicios & Contratos</h3>
+              <p class="text-xs font-bold text-slate-800 italic mb-2">“Distintos contratos para tu etapa actual.”</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed mb-4 line-clamp-2">Planes: Análisis desde 0, Análisis de negocio (Más solicitado) y Análisis de producto.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-amber-900/15 text-xs font-bold text-brand-800">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Ver modalidades</span></span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARPETA 03: RESEÑAS DE GOOGLE (Móvil) -->
+          <div class="file-folder mobile-stack-card stack-pos-2 p-5 sm:p-6" data-folder-index="2" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>03. RESEÑAS</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-3.5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-extrabold text-[11px] uppercase tracking-tight text-slate-800">Vanguardia Asesores</span>
+                <div class="rubber-stamp stamp-red text-[9px] py-0.5 px-1.5">Google 4.9★</div>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight leading-snug mb-1">Reseñas de Clientes</h3>
+              <p class="text-xs font-bold text-slate-800 italic mb-2">“Lo que opinan nuestros clientes.”</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed mb-4 line-clamp-2">Experiencias reales y verificadas de comerciantes, fundadores y directores.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-amber-900/15 text-xs font-bold text-brand-800">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Leer opiniones</span></span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARPETA 04: CÓMO TRABAJAMOS (Móvil) -->
+          <div class="file-folder mobile-stack-card stack-pos-3 p-5 sm:p-6" data-folder-index="3" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>04. METODOLOGÍA</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-3.5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-extrabold text-[11px] uppercase tracking-tight text-slate-800">Vanguardia Asesores</span>
+                <div class="rubber-stamp stamp-emerald text-[9px] py-0.5 px-1.5">Paso a Paso</div>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight leading-snug mb-1">¿Cómo Trabajamos?</h3>
+              <p class="text-xs font-bold text-slate-800 italic mb-2">“Coordinamos una visita presencial.”</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed mb-4 line-clamp-2">4 etapas: Contacto inicial, coordinación, diagnóstico y ejecución con resultados.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-amber-900/15 text-xs font-bold text-brand-800">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Ver metodología</span></span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+          </div>
+
+          <!-- CARPETA 05: CONTACTO & VISITA (Móvil) -->
+          <div class="file-folder mobile-stack-card stack-pos-4 p-5 sm:p-6" data-folder-index="4" role="button" tabindex="0">
+            <div class="folder-tab">
+              <span>05. CONTACTO</span>
+            </div>
+            <div class="folder-seam"></div>
+            <div class="pl-3.5">
+              <div class="flex items-center justify-between mb-3">
+                <span class="font-extrabold text-[11px] uppercase tracking-tight text-slate-800">Vanguardia Asesores</span>
+                <div class="rubber-stamp stamp-red text-[9px] py-0.5 px-1.5">Directo</div>
+              </div>
+              <h3 class="text-xl font-black text-slate-900 tracking-tight leading-snug mb-1">Contacto & Visita</h3>
+              <p class="text-xs font-bold text-slate-800 italic mb-2">“Hablemos de los números de tu negocio.”</p>
+              <p class="text-[11px] text-slate-600 leading-relaxed mb-4 line-clamp-2">Mesa de entrada: formulario de contacto con Web3Forms, teléfono 341 111 1111.</p>
+              <div class="flex items-center justify-between pt-2 border-t border-amber-900/15 text-xs font-bold text-brand-800">
+                <span class="flex items-center gap-1.5"><i class="fa-solid fa-folder-open text-amber-700"></i><span>Contactar ahora</span></span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Controles de navegación de la pila (Pase de página táctil y accesible) -->
+        <div class="flex items-center justify-center gap-4 mt-8">
+          <button type="button" id="mobile-prev-btn" class="w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 active:scale-95 text-white border border-white/20 flex items-center justify-center shadow-lg transition-transform" aria-label="Carpeta anterior">
+            <i class="fa-solid fa-chevron-left text-sm"></i>
+          </button>
+          
+          <!-- Puntos indicadores de posición en la pila -->
+          <div class="flex items-center gap-2" id="mobile-stack-dots">
+            <button type="button" class="mobile-stack-dot w-6 h-2 rounded-full bg-amber-400 transition-all" data-dot-index="0" aria-label="Ir a carpeta 1"></button>
+            <button type="button" class="mobile-stack-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-dot-index="1" aria-label="Ir a carpeta 2"></button>
+            <button type="button" class="mobile-stack-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-dot-index="2" aria-label="Ir a carpeta 3"></button>
+            <button type="button" class="mobile-stack-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-dot-index="3" aria-label="Ir a carpeta 4"></button>
+            <button type="button" class="mobile-stack-dot w-2 h-2 rounded-full bg-white/40 hover:bg-white/70 transition-all" data-dot-index="4" aria-label="Ir a carpeta 5"></button>
+          </div>
+
+          <button type="button" id="mobile-next-btn" class="w-10 h-10 rounded-full bg-slate-900/85 hover:bg-slate-800 active:scale-95 text-white border border-white/20 flex items-center justify-center shadow-lg transition-transform" aria-label="Siguiente carpeta">
+            <i class="fa-solid fa-chevron-right text-sm"></i>
+          </button>
+        </div>
+
+        <!-- Botón directo para abrir la carpeta al frente -->
+        <div class="mt-4 text-center">
+          <button type="button" id="mobile-open-active-btn" class="px-5 py-2.5 rounded-xl bg-amber-500 hover:bg-amber-400 active:scale-95 text-slate-950 font-extrabold text-xs shadow-xl inline-flex items-center gap-2 transition-transform">
+            <i class="fa-solid fa-folder-open"></i>
+            <span id="mobile-open-btn-text">Abrir Carpeta: 01. INICIO</span>
+          </button>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- =========================================================================
+       3. SECCIÓN ABIERTA / PAPELES LEVANTADOS SOBRE LA MESA (DOSSIER STAGE)
+       Al hacer clic en una carpeta, "salen los papeles y se levanta la sección"
+       Incluye una X claramente visible para cerrar y volver a las carpetas en la mesa
+       ========================================================================= -->
+  <div id="open-dossier-stage" class="open-dossier-stage" aria-modal="true" role="dialog">
+    <div class="dossier-paper-container">
+      
+      <!-- Barra superior de la sección abierta con botón X de cierre -->
+      <div class="flex items-center justify-between mb-4 px-2">
+        <div class="flex items-center gap-3">
+          <div class="px-3.5 py-1.5 rounded-full bg-slate-900/80 text-white border border-white/20 text-xs font-bold flex items-center gap-2">
+            <i class="fa-solid fa-folder-open text-amber-400"></i>
+            <span id="open-dossier-label">01 — INICIO & RENTABILIDAD</span>
+          </div>
+          <span class="text-xs text-slate-300 font-medium hidden sm:inline">Presioná Escape o el botón para volver a la mesa</span>
+        </div>
+
+        <!-- Botón X para cerrar la sección abierta -->
+        <button type="button" id="close-dossier-btn" class="close-dossier-btn px-4 py-2 rounded-full bg-white/90 text-slate-900 font-bold text-xs flex items-center gap-2 shadow-lg border border-slate-300 cursor-pointer" aria-label="Cerrar carpeta y volver a la mesa">
+          <span>Volver a la mesa</span>
+          <i class="fa-solid fa-xmark text-sm font-black text-rose-600"></i>
+        </button>
+      </div>
+
+      <!-- CONTENEDOR DE PAPELES DE CADA SECCIÓN -->
+      <div id="dossier-content-area">
+
+        <!-- ==================== PAPELES DE LA SECCIÓN 0: INICIO ==================== -->
+        <div class="dossier-section-pane hidden" data-pane-index="0">
+          <article class="paper-sheet paper-corner-fold p-8 sm:p-12">
+            <div class="flex items-center justify-between border-b border-slate-200/90 pb-4 mb-6">
+              <div class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider text-slate-500">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+                <span>Vanguardia Asesores • 01. Inicio</span>
+              </div>
+              <div class="rubber-stamp stamp-emerald">
+                Rentabilidad Real
+              </div>
+            </div>
+
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-black text-slate-900 tracking-tight leading-tight mb-4">
+              Haciendo <span class="text-brand-600 underline decoration-sky-400/40">rentable</span> tu idea o negocio.
+            </h1>
+
+            <p class="text-brand-700 text-lg sm:text-xl font-semibold italic mb-6 leading-snug">
+              “Convertimos incertidumbre y costos invisibles en rentabilidad predecible y medible.”
+            </p>
+
+            <p class="text-slate-700 text-base leading-relaxed mb-8">
+              Acompañamos a emprendedores y dueños de empresas en la toma de decisiones comerciales clave. Optimizamos procesos, evaluamos viabilidad y maximizamos márgenes reales con metodología comprobada y visitas presenciales.
+            </p>
+
+            <div class="grid grid-cols-3 gap-4 p-5 rounded-xl bg-slate-100/90 border border-slate-200 mb-8 text-center">
+              <div>
+                <div class="text-2xl sm:text-3xl font-black text-slate-900">+10</div>
+                <div class="text-[11px] font-bold text-slate-500 uppercase mt-1">Años Trayectoria</div>
+              </div>
+              <div class="border-x border-slate-200">
+                <div class="text-2xl sm:text-3xl font-black text-emerald-600">+120</div>
+                <div class="text-[11px] font-bold text-slate-500 uppercase mt-1">Negocios Potenciados</div>
+              </div>
+              <div>
+                <div class="text-2xl sm:text-3xl font-black text-sky-600">98%</div>
+                <div class="text-[11px] font-bold text-slate-500 uppercase mt-1">Clientes Satisfechos</div>
+              </div>
+            </div>
+
+            <div class="space-y-3 mb-8">
+              <div class="flex items-start gap-3 p-3.5 rounded-lg bg-white/80 border border-slate-200">
+                <i class="fa-solid fa-check-double text-emerald-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 text-sm">Diagnóstico Presencial In-Situ:</strong>
+                  <span class="text-slate-600 text-xs ml-1">Visitamos tus instalaciones para auditar los costos y procesos reales.</span>
+                </div>
+              </div>
+              <div class="flex items-start gap-3 p-3.5 rounded-lg bg-white/80 border border-slate-200">
+                <i class="fa-solid fa-check-double text-emerald-600 mt-1"></i>
+                <div>
+                  <strong class="text-slate-900 text-sm">Cero Fórmulas Mágicas:</strong>
+                  <span class="text-slate-600 text-xs ml-1">Enfoque 100% numérico sobre márgenes, precios y compras.</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center gap-3 pt-6 border-t border-slate-200">
+              <button type="button" data-open-tab="1" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs text-white bg-slate-900 hover:bg-brand-600 shadow-md transition-all flex items-center justify-center gap-2">
+                <span>Ver Tipos de Contrato</span>
+                <i class="fa-solid fa-arrow-right text-[10px]"></i>
+              </button>
+              <a href="https://wa.me/5493411111111?text=Hola,%20quisiera%20asesoramiento%20comercial%20para%20mi%20negocio" target="_blank" rel="noopener" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs text-emerald-800 bg-emerald-50 border border-emerald-300 hover:bg-emerald-100 transition-all flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm text-emerald-600"></i>
+                <span>Consultar por WhatsApp</span>
+              </a>
+            </div>
+          </article>
+        </div>
+
+        <!-- ==================== PAPELES DE LA SECCIÓN 1: CONTRATOS ==================== -->
+        <div class="dossier-section-pane hidden" data-pane-index="1">
+          <article class="paper-sheet paper-corner-fold p-8 sm:p-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-200/90 pb-4 mb-6 gap-4">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-1">
+                  Vanguardia Asesores • 02. Servicios & Contratos
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                  Distintos contratos posibles para tu etapa actual
+                </h2>
+              </div>
+              <div class="rubber-stamp stamp-blue">
+                Modalidades Flexibles
+              </div>
+            </div>
+
+            <p class="text-slate-600 text-sm leading-relaxed mb-8">
+              Cada empresa tiene desafíos particulares. Diseñamos modalidades de contratación flexibles adaptadas a tu necesidad puntual o crecimiento integral.
+            </p>
+
+            <!-- 3 CONTRATOS CON CONTRASTE Y LEGIBILIDAD 100% CORREGIDA -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 items-stretch mb-8">
+              
+              <!-- Contrato 1: Análisis desde 0 -->
+              <div class="p-6 rounded-xl bg-[#fffefb] border border-amber-300/80 shadow-md flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-amber-100 text-amber-900">Etapa Temprana</span>
+                    <i class="fa-solid fa-lightbulb text-amber-600 text-lg"></i>
+                  </div>
+                  <h3 class="text-xl font-black text-slate-900 mb-1">Análisis desde 0</h3>
+                  <p class="text-brand-700 font-semibold text-xs mb-3 italic">
+                    “Tenés una idea y querés llevarla a cabo de forma rentable”
+                  </p>
+                  <p class="text-slate-700 text-xs leading-relaxed mb-4">
+                    Validamos tu modelo de negocio antes de que inviertas a ciegas. Evaluamos costos reales, viabilidad comercial y trazamos el plan financiero inicial.
+                  </p>
+                  <ul class="space-y-2 mb-6 text-xs text-slate-800">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Viabilidad económica y comercial</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Definición de propuesta de valor</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Costos fijos y variables reales</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Hoja de ruta para el lanzamiento</li>
+                  </ul>
+                </div>
+                <button type="button" data-plan-name="Análisis desde 0" class="select-plan-btn w-full py-2.5 px-4 rounded-lg font-bold text-xs text-slate-900 bg-white border border-slate-300 hover:bg-slate-900 hover:text-white transition-all text-center">
+                  Elegir este contrato
+                </button>
+              </div>
+
+              <!-- Contrato 2: Análisis de negocio (MÁXIMO CONTRASTE: FONDO OSCURO SÓLIDO CON TEXTOS BLANCOS NÍTIDOS) -->
+              <div class="contract-card-featured p-6 rounded-xl relative flex flex-col justify-between">
+                <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-sky-400 to-emerald-400 text-slate-950 text-[10px] font-black uppercase tracking-wider px-3 py-0.5 rounded-full shadow">
+                  Más Solicitado
+                </div>
+                <div>
+                  <div class="flex items-center justify-between mb-4 pt-1">
+                    <span class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-white/20 text-sky-200">Negocios en Marcha</span>
+                    <i class="fa-solid fa-briefcase text-emerald-400 text-lg"></i>
+                  </div>
+                  <h3 class="text-xl font-black text-white mb-1">Análisis de negocio</h3>
+                  <p class="plan-quote font-semibold text-xs mb-3 italic">
+                    “Seguimiento de mercado y asesoramiento para mejorar rentabilidad”
+                  </p>
+                  <p class="text-slate-200 text-xs leading-relaxed mb-4">
+                    Para negocios operativos que buscan ordenar números, detener pérdidas invisibles y multiplicar la ganancia neta mediante auditoría y estrategia continua.
+                  </p>
+                  <ul class="space-y-2 mb-6 text-xs text-slate-100">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-[11px]"></i> Auditoría financiera y fugas de dinero</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-[11px]"></i> Estrategia de precios (pricing) y márgenes</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-[11px]"></i> Análisis de competencia y mercado</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-400 text-[11px]"></i> Visitas presenciales y seguimiento</li>
+                  </ul>
+                </div>
+                <button type="button" data-plan-name="Análisis de negocio" class="select-plan-btn w-full py-2.5 px-4 rounded-lg font-bold text-xs text-slate-950 bg-gradient-to-r from-sky-400 to-emerald-400 hover:from-sky-300 hover:to-emerald-300 transition-all text-center shadow">
+                  Elegir este contrato
+                </button>
+              </div>
+
+              <!-- Contrato 3: Análisis de producto -->
+              <div class="p-6 rounded-xl bg-[#f8fdf9] border border-emerald-300/80 shadow-md flex flex-col justify-between">
+                <div>
+                  <div class="flex items-center justify-between mb-4">
+                    <span class="text-xs font-bold uppercase px-2.5 py-1 rounded bg-emerald-100 text-emerald-900">Lanzamiento</span>
+                    <i class="fa-solid fa-box-open text-emerald-600 text-lg"></i>
+                  </div>
+                  <h3 class="text-xl font-black text-slate-900 mb-1">Análisis de producto</h3>
+                  <p class="text-emerald-700 font-semibold text-xs mb-3 italic">
+                    “Asesoramiento para lanzar un nuevo producto al mercado”
+                  </p>
+                  <p class="text-slate-700 text-xs leading-relaxed mb-4">
+                    Diseñamos la estrategia comercial y de posicionamiento precisa para que tu nuevo lanzamiento tenga tracción inmediata y no fracase por falta de mercado.
+                  </p>
+                  <ul class="space-y-2 mb-6 text-xs text-slate-800">
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Estudio de público y segmentación</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Estrategia go-to-market y canales</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Proyecciones de ventas y punto de equilibrio</li>
+                    <li class="flex items-center gap-2"><i class="fa-solid fa-circle-check text-emerald-600 text-[11px]"></i> Testeo de producto y feedback temprano</li>
+                  </ul>
+                </div>
+                <button type="button" data-plan-name="Análisis de producto" class="select-plan-btn w-full py-2.5 px-4 rounded-lg font-bold text-xs text-slate-900 bg-white border border-slate-300 hover:bg-slate-900 hover:text-white transition-all text-center">
+                  Elegir este contrato
+                </button>
+              </div>
+
+            </div>
+
+            <!-- Banner combinado -->
+            <div class="p-4 rounded-xl bg-slate-100 border border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <div class="flex items-center gap-3">
+                <i class="fa-solid fa-file-signature text-brand-600 text-xl"></i>
+                <div>
+                  <h4 class="font-bold text-slate-900 text-xs sm:text-sm">¿Tu caso requiere un contrato combinado o personalizado?</h4>
+                  <p class="text-slate-500 text-xs">Armamos un plan a medida según el tamaño, rubro y urgencia de tu empresa.</p>
+                </div>
+              </div>
+              <button type="button" data-open-tab="4" class="whitespace-nowrap px-4 py-2 rounded-lg bg-slate-900 text-white text-xs font-semibold hover:bg-brand-600 transition-colors">
+                Solicitar Diagnóstico
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- ==================== PAPELES DE LA SECCIÓN 2: RESEÑAS ==================== -->
+        <div class="dossier-section-pane hidden" data-pane-index="2">
+          <article class="paper-sheet paper-corner-fold p-8 sm:p-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-200/90 pb-4 mb-6 gap-4">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-amber-700 mb-1">
+                  Vanguardia Asesores • 03. Reseñas de Clientes
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                  Lo que opinan nuestros clientes
+                </h2>
+              </div>
+
+              <div class="flex items-center gap-3 bg-white p-3 rounded-xl border border-slate-200 shadow-sm">
+                <svg class="w-8 h-8 flex-shrink-0" viewBox="0 0 24 24">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+                <div>
+                  <div class="flex items-center gap-1">
+                    <span class="text-xl font-black text-slate-900 leading-none">4.9</span>
+                    <div class="flex text-amber-400 text-xs">
+                      <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                    </div>
+                  </div>
+                  <div class="text-[10px] text-slate-500 font-semibold mt-0.5">48 opiniones en Google</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- 6 Reseñas -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+              
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-blue-600 text-white font-bold flex items-center justify-center text-xs">JP</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Juan Pablo Rossi</h4>
+                      <div class="text-[10px] text-slate-400">Local Guide • hace 3 semanas</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “Contratamos el <strong>Análisis de Negocio</strong> para nuestra cadena gastronómica. En menos de 45 días detectaron costos ocultos en compras y proveedores que nos permitieron subir 7 puntos el margen neto. Impecable el trato y la claridad.”
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-emerald-600 text-white font-bold flex items-center justify-center text-xs">MB</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Mariana Beltrán</h4>
+                      <div class="text-[10px] text-slate-400">Emprendedora • hace 1 mes</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “Hice el <strong>Análisis desde 0</strong>. Tenía una idea en mente pero no sabía por dónde empezar a calcular números ni fijar precios. Me salvaron de cometer errores muy caros. Hoy el proyecto ya está facturando. Muy recomendables.”
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-indigo-600 text-white font-bold flex items-center justify-center text-xs">EM</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Dr. Esteban Morales</h4>
+                      <div class="text-[10px] text-slate-400">Director Centro Médico • hace 2 meses</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “La visita presencial y el diagnóstico en el lugar marcaron toda la diferencia. No te mandan un PDF genérico: se involucran con tu equipo y te dicen la verdad de los números de forma transparente.”
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-violet-600 text-white font-bold flex items-center justify-center text-xs">LF</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Lucía Fernández</h4>
+                      <div class="text-[10px] text-slate-400">Comercio Mayorista • hace 3 meses</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “Con el <strong>Análisis de Producto</strong> logramos lanzar una nueva línea al mercado con demanda validada de antemano. Nos ayudaron a no quemar presupuesto en marketing inútil.”
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-rose-600 text-white font-bold flex items-center justify-center text-xs">GT</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Gonzalo Torres</h4>
+                      <div class="text-[10px] text-slate-400">Local Guide • hace 4 meses</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “Gran equipo de asesores comerciales. Muy resolutivos, sin vueltas y siempre disponibles por WhatsApp para resolver dudas operativas del día a día.”
+                </p>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200/90 shadow-sm">
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex items-center gap-2.5">
+                    <div class="w-9 h-9 rounded-full bg-teal-600 text-white font-bold flex items-center justify-center text-xs">VR</div>
+                    <div>
+                      <h4 class="font-bold text-slate-900 text-xs">Valeria Ricardi</h4>
+                      <div class="text-[10px] text-slate-400">Servicios Corporativos • hace 5 meses</div>
+                    </div>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-sm"></i>
+                </div>
+                <div class="flex text-amber-400 text-xs mb-2">
+                  <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                </div>
+                <p class="text-slate-700 text-xs leading-relaxed">
+                  “Coordinamos la visita por WhatsApp y en la misma semana ya estaban en nuestras oficinas. Excelente profesionalismo y visión comercial estratégica.”
+                </p>
+              </div>
+
+            </div>
+          </article>
+        </div>
+
+        <!-- ==================== PAPELES DE LA SECCIÓN 3: CÓMO TRABAJAMOS ==================== -->
+        <div class="dossier-section-pane hidden" data-pane-index="3">
+          <article class="paper-sheet paper-corner-fold p-8 sm:p-12">
+            <div class="flex flex-col sm:flex-row items-start sm:items-center justify-between border-b border-slate-200/90 pb-4 mb-6 gap-4">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-emerald-700 mb-1">
+                  Vanguardia Asesores • 04. Metodología Paso a Paso
+                </div>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
+                  ¿Cómo trabajamos?
+                </h2>
+              </div>
+              <div class="rubber-stamp stamp-emerald">
+                Paso a Paso
+              </div>
+            </div>
+
+            <!-- Llamado explícito requerido -->
+            <div class="p-4 rounded-xl bg-amber-50 border border-amber-200 mb-8 flex items-center gap-3">
+              <i class="fa-solid fa-circle-info text-amber-600 text-lg"></i>
+              <p class="text-slate-800 text-sm sm:text-base font-medium">
+                Contactanos por WhatsApp o rellená el formulario de contacto y <span class="text-brand-600 font-bold underline decoration-brand-500/30">coordinamos una visita</span>.
+              </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+              
+              <div class="p-5 rounded-xl bg-white border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-black text-base flex items-center justify-center mb-3">01</div>
+                  <h3 class="font-bold text-slate-900 text-sm mb-1">Contacto Inicial</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Nos escribís por WhatsApp o completás el formulario con datos básicos de tu negocio y rubro.</p>
+                </div>
+                <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] font-bold text-emerald-600">
+                  <i class="fa-solid fa-bolt mr-1"></i> Respuesta &lt; 24 hs
+                </div>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-black text-base flex items-center justify-center mb-3">02</div>
+                  <h3 class="font-bold text-slate-900 text-sm mb-1">Coordinación de Visita</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Fijamos día y horario para visitarte presencialmente en tu local u oficina, o mediante reunión virtual.</p>
+                </div>
+                <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] font-bold text-sky-600">
+                  <i class="fa-solid fa-location-dot mr-1"></i> Diagnóstico en el lugar
+                </div>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-brand-50 text-brand-600 font-black text-base flex items-center justify-center mb-3">03</div>
+                  <h3 class="font-bold text-slate-900 text-sm mb-1">Diagnóstico & Propuesta</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Analizamos los números reales y presentamos el contrato o plan específico para maximizar rentabilidad.</p>
+                </div>
+                <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] font-bold text-indigo-600">
+                  <i class="fa-solid fa-file-contract mr-1"></i> Claridad transparente
+                </div>
+              </div>
+
+              <div class="p-5 rounded-xl bg-white border border-slate-200 flex flex-col justify-between">
+                <div>
+                  <div class="w-10 h-10 rounded-lg bg-emerald-50 text-emerald-600 font-black text-base flex items-center justify-center mb-3">04</div>
+                  <h3 class="font-bold text-slate-900 text-sm mb-1">Ejecución & Resultados</h3>
+                  <p class="text-slate-600 text-xs leading-relaxed">Implementamos las mejoras comerciales, optimizamos precios y hacemos seguimiento continuo.</p>
+                </div>
+                <div class="mt-4 pt-2 border-t border-slate-100 text-[10px] font-bold text-emerald-600">
+                  <i class="fa-solid fa-arrow-trend-up mr-1"></i> Rentabilidad creciente
+                </div>
+              </div>
+
+            </div>
+
+            <div class="p-6 rounded-xl bg-slate-900 text-white mb-6">
+              <div class="text-[10px] font-bold uppercase tracking-wider text-sky-400 mb-2">Nuestra Filosofía de Trabajo</div>
+              <blockquote class="text-base sm:text-lg font-bold italic text-slate-200 mb-3">
+                “No vendemos fórmulas mágicas. Nos sentamos con vos, auditamos los números reales y construimos el camino hacia una rentabilidad predecible y medible.”
+              </blockquote>
+              <div class="flex flex-wrap items-center gap-4 text-xs text-slate-400">
+                <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Diagnóstico en el lugar</span>
+                <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Enfoque 100% numérico</span>
+                <span><i class="fa-solid fa-check text-emerald-400 mr-1"></i> Acompañamiento cercano</span>
+              </div>
+            </div>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <a href="https://wa.me/5493411111111?text=Hola,%20le%C3%AD%20la%20secci%C3%B3n%20de%20c%C3%B3mo%20trabajan%20y%20quiero%20coordinar%20una%20visita" target="_blank" rel="noopener" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs text-white bg-emerald-600 hover:bg-emerald-500 shadow-md transition-all flex items-center justify-center gap-2">
+                <i class="fa-brands fa-whatsapp text-sm"></i>
+                <span>Coordinar Visita por WhatsApp</span>
+              </a>
+              <button type="button" data-open-tab="4" class="w-full sm:w-auto px-6 py-3.5 rounded-xl font-bold text-xs text-slate-800 bg-white border border-slate-300 hover:bg-slate-100 shadow-sm transition-all flex items-center justify-center gap-2">
+                <i class="fa-regular fa-paper-plane text-slate-600"></i>
+                <span>Completar Formulario de Contacto</span>
+              </button>
+            </div>
+          </article>
+        </div>
+
+        <!-- ==================== PAPELES DE LA SECCIÓN 4: CONTACTO ==================== -->
+        <div class="dossier-section-pane hidden" data-pane-index="4">
+          <article class="paper-sheet paper-corner-fold p-8 sm:p-12">
+            <div class="flex items-center justify-between border-b border-slate-200/90 pb-4 mb-6">
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-brand-600 mb-0.5">Vanguardia Asesores • 05. Contacto & Visita</div>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">Formulario de Contacto & Visita</h2>
+              </div>
+              <div class="rubber-stamp stamp-red">
+                Mesa de Entrada
+              </div>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+              
+              <!-- Formulario Web3Forms -->
+              <div class="lg:col-span-7">
+                <div id="desk-form-status" class="hidden mb-4"></div>
+
+                <form id="desk-contact-form" action="https://api.web3forms.com/submit" method="POST" class="space-y-4">
+                  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+                  <input type="hidden" name="subject" value="Nuevo contacto desde Landing Page C (Carpetas sobre la Mesa)">
+                  <input type="hidden" name="from_name" value="Landing Page Vanguardia C">
+                  <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+
+                  <!-- Nombre y Apellido -->
+                  <div>
+                    <label for="desk-form-name" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                      Nombre y Apellido <span class="text-rose-500">*</span>
+                    </label>
+                    <input type="text" id="desk-form-name" name="nombre_apellido" required placeholder="Ej: Marcelo Gómez" class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-xs outline-none bg-white">
+                  </div>
+
+                  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <!-- Rubro -->
+                    <div>
+                      <label for="desk-form-rubro" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Rubro del Negocio <span class="text-rose-500">*</span>
+                      </label>
+                      <select id="desk-form-rubro" name="rubro_negocio" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-xs outline-none bg-white">
+                        <option value="" disabled selected>Selecciona tu rubro</option>
+                        <option value="Gastronomía y Restaurantes">Gastronomía y Bares</option>
+                        <option value="Comercio Minorista / Retail">Comercio Minorista / Retail</option>
+                        <option value="Distribución y Mayorista">Distribución / Mayorista</option>
+                        <option value="Servicios Profesionales">Servicios Profesionales</option>
+                        <option value="Tecnología y Software">Tecnología y Software</option>
+                        <option value="Salud y Estética">Salud y Estética</option>
+                        <option value="Industria y Manufactura">Industria y Manufactura</option>
+                        <option value="Emprendimiento Nuevo">Emprendimiento Nuevo</option>
+                        <option value="Otro">Otro rubro</option>
+                      </select>
+                    </div>
+
+                    <!-- Tamaño -->
+                    <div>
+                      <label for="desk-form-tamano" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                        Tamaño del Negocio <span class="text-rose-500">*</span>
+                      </label>
+                      <select id="desk-form-tamano" name="tamano_negocio" required class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-xs outline-none bg-white">
+                        <option value="" disabled selected>Cantidad de personas</option>
+                        <option value="En etapa de idea / Solo fundador">En etapa de idea (Solo fundador)</option>
+                        <option value="1 a 5 empleados">Pequeño (1 a 5 personas)</option>
+                        <option value="6 a 20 empleados">Mediano (6 a 20 personas)</option>
+                        <option value="Más de 20 empleados">Empresa Consolidada (+20 personas)</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <!-- Descripción -->
+                  <div>
+                    <label for="desk-form-description" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">
+                      Descripción / ¿Qué necesitás mejorar? <span class="text-rose-500">*</span>
+                    </label>
+                    <textarea id="desk-form-description" name="descripcion" rows="3" required placeholder="Contanos brevemente qué hace tu negocio, objetivos o desafíos de rentabilidad..." class="w-full px-3.5 py-2.5 rounded-lg border border-slate-300 focus:border-brand-600 focus:ring-2 focus:ring-brand-500/20 text-slate-900 text-xs outline-none bg-white"></textarea>
+                  </div>
+
+                  <button type="submit" id="desk-form-submit-btn" class="w-full py-3.5 px-6 rounded-xl font-bold text-xs text-white bg-slate-900 hover:bg-brand-600 transition-all shadow-md flex items-center justify-center gap-2 cursor-pointer">
+                    <i class="fa-regular fa-paper-plane"></i>
+                    <span>Enviar Formulario & Coordinar Visita</span>
+                  </button>
+                </form>
+              </div>
+
+              <!-- Canales Directos -->
+              <div class="lg:col-span-5 space-y-4">
+                <div class="p-5 rounded-xl bg-slate-50 border border-slate-200">
+                  <h4 class="font-bold text-slate-900 text-xs uppercase tracking-wider mb-3">
+                    Canales de Atención Directa
+                  </h4>
+                  <div class="space-y-3 mb-4">
+                    <a href="tel:3411111111" class="flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-200 hover:border-brand-500/40 transition-all">
+                      <div class="w-8 h-8 rounded-lg bg-brand-600 text-white flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-phone"></i>
+                      </div>
+                      <div>
+                        <div class="text-[10px] text-slate-400 font-semibold uppercase">Teléfono</div>
+                        <div class="text-xs font-bold text-slate-900">341 111 1111</div>
+                      </div>
+                    </a>
+
+                    <a href="mailto:ejemplo@mail.com" class="flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-200 hover:border-brand-500/40 transition-all">
+                      <div class="w-8 h-8 rounded-lg bg-sky-600 text-white flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-envelope"></i>
+                      </div>
+                      <div>
+                        <div class="text-[10px] text-slate-400 font-semibold uppercase">Email</div>
+                        <div class="text-xs font-bold text-slate-900">ejemplo@mail.com</div>
+                      </div>
+                    </a>
+
+                    <div class="flex items-center gap-3 p-3 rounded-lg bg-white border border-slate-200">
+                      <div class="w-8 h-8 rounded-lg bg-slate-900 text-white flex items-center justify-center text-xs">
+                        <i class="fa-solid fa-clock"></i>
+                      </div>
+                      <div>
+                        <div class="text-[10px] text-slate-400 font-semibold uppercase">Horario</div>
+                        <div class="text-xs font-bold text-slate-800">Lunes a Viernes 9:00 a 18:00 hs</div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a href="https://wa.me/5493411111111?text=Hola,%20quisiera%20coordinar%20una%20visita" target="_blank" rel="noopener" class="w-full py-3 px-4 rounded-xl bg-gradient-to-r from-emerald-600 to-teal-700 text-white font-bold text-xs flex items-center justify-center gap-2 shadow hover:from-emerald-500 hover:to-teal-600 transition-all">
+                    <i class="fa-brands fa-whatsapp text-sm"></i>
+                    <span>Contactar por WhatsApp</span>
+                  </a>
+                </div>
+              </div>
+
+            </div>
+          </article>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       4. ÍNDICE DE SECCIONES TRANSLÚCIDO EN LA PARTE INFERIOR (DOCK BAR)
+       Requerimiento: "Debe haber un indice de secciones, bastante translucido, en la parte de abajo"
+       ========================================================================= -->
+  <nav class="fixed bottom-4 sm:bottom-6 left-1/2 -translate-x-1/2 z-40 max-w-full px-3">
+    <div class="translucent-dock rounded-full p-1.5 sm:p-2 flex items-center gap-1 sm:gap-2">
+      <!-- Botón para volver a ver todas las carpetas en la mesa -->
+      <button type="button" id="dock-desk-btn" class="dock-tab active px-3 sm:px-4 py-2 rounded-full text-xs font-bold flex items-center gap-1.5 whitespace-nowrap">
+        <i class="fa-solid fa-table text-xs"></i>
+        <span>Mesa</span>
+      </button>
+
+      <button type="button" data-open-tab="0" class="dock-tab px-3 sm:px-4 py-2 rounded-full text-xs font-semibold text-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+        <span>01</span>
+        <span class="hidden sm:inline">Inicio</span>
+      </button>
+
+      <button type="button" data-open-tab="1" class="dock-tab px-3 sm:px-4 py-2 rounded-full text-xs font-semibold text-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+        <span>02</span>
+        <span class="hidden sm:inline">Contratos</span>
+      </button>
+
+      <button type="button" data-open-tab="2" class="dock-tab px-3 sm:px-4 py-2 rounded-full text-xs font-semibold text-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+        <span>03</span>
+        <span class="hidden sm:inline">Reseñas</span>
+      </button>
+
+      <button type="button" data-open-tab="3" class="dock-tab px-3 sm:px-4 py-2 rounded-full text-xs font-semibold text-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+        <span>04</span>
+        <span class="hidden sm:inline">Cómo Trabajamos</span>
+      </button>
+
+      <button type="button" data-open-tab="4" class="dock-tab px-3 sm:px-4 py-2 rounded-full text-xs font-semibold text-slate-200 flex items-center gap-1.5 whitespace-nowrap">
+        <span>05</span>
+        <span class="hidden sm:inline">Contacto</span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- =========================================================================
+       5. BOTÓN FLOTANTE DE WHATSAPP
+       ========================================================================= -->
+  <a 
+    href="https://wa.me/5493411111111?text=Hola,%20me%20gustar%C3%ADa%20coordinar%20una%20visita%20de%20asesoramiento%20para%20mi%20negocio" 
+    target="_blank" 
+    rel="noopener" 
+    class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-50 w-12 h-12 sm:w-14 sm:h-14 bg-emerald-500 hover:bg-emerald-600 text-white rounded-full flex items-center justify-center text-xl sm:text-2xl shadow-2xl hover:scale-110 transition-transform pulse-wa"
+    aria-label="Hablar por WhatsApp"
+    title="Coordinar visita por WhatsApp"
+  >
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Script Principal de la Landing Page C -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,1045 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vanguardia Asesores | Asesoría Comercial & Rentabilidad de Negocios</title>
+  <meta name="description" content="Haciendo rentable tu idea o negocio. Diseño geométrico moderno: análisis desde 0, de negocio y de producto. Coordinamos una visita presencial.">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%20width=%22100%22%20height=%22100%22><text y=%22.9em%22 font-size=%2290%22>📐</text></svg>">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              50: '#f0f9ff',
+              100: '#e0f2fe',
+              500: '#0284c7',
+              600: '#0369a1',
+              700: '#075985',
+              800: '#0c4a6e',
+              900: '#0f172a',
+              950: '#0a0f1d',
+            },
+            accent: {
+              400: '#34d399',
+              500: '#10b981',
+              600: '#059669',
+            },
+            cyan: {
+              400: '#22d3ee',
+              500: '#06b6d4',
+            },
+            indigo: {
+              500: '#6366f1',
+              600: '#4f46e5',
+            }
+          },
+          fontFamily: {
+            sans: ['Plus Jakarta Sans', 'sans-serif'],
+            heading: ['Outfit', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- Custom Geometric Styles -->
+  <link rel="stylesheet" href="assets/css/custom.css">
+</head>
+<body class="bg-slate-50 text-slate-800 antialiased font-sans selection:bg-indigo-600 selection:text-white overflow-x-hidden">
+
+  <!-- =========================================================================
+       1. BARRA SUPERIOR (HEADER / NAVBAR GEOMÉTRICO)
+       Navegación fija con efecto de cristal esmerilado y acentos angulares
+       ========================================================================= -->
+  <header id="main-navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-slate-100">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-20">
+        
+        <!-- Logotipo con isotipo geométrico -->
+        <a href="#inicio" class="flex items-center gap-3 group">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-brand-950 via-indigo-900 to-cyan-500 flex items-center justify-center text-white shadow-md shadow-indigo-900/20 group-hover:rotate-6 transition-transform">
+            <i class="fa-solid fa-shapes text-lg text-cyan-300"></i>
+          </div>
+          <div class="flex flex-col">
+            <span class="font-heading font-extrabold text-xl tracking-tight text-slate-900 group-hover:text-indigo-600 transition-colors">
+              Vanguardia<span class="text-cyan-500">.</span>
+            </span>
+            <span class="text-[9.5px] uppercase tracking-widest text-slate-500 font-bold -mt-1">
+              Asesoría Comercial & Rentabilidad
+            </span>
+          </div>
+        </a>
+
+        <!-- Menú de navegación Desktop -->
+        <nav class="hidden md:flex items-center gap-8">
+          <a href="#inicio" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Inicio</a>
+          <a href="#servicios" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Servicios & Contratos</a>
+          <a href="#resenas" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Reseñas</a>
+          <a href="#como-trabajamos" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors flex items-center gap-1.5">
+            <span>Cómo Trabajamos</span>
+            <span class="w-2 h-2 rounded-full bg-cyan-400 animate-pulse"></span>
+          </a>
+          <a href="#contacto" class="text-sm font-semibold text-slate-600 hover:text-indigo-600 transition-colors">Contacto</a>
+        </nav>
+
+        <!-- Botones de Acción Desktop -->
+        <div class="hidden lg:flex items-center gap-4">
+          <a href="https://wa.me/5493411111111?text=Hola,%20me%20gustar%C3%ADa%20coordinar%20una%20visita%20de%20asesoramiento" target="_blank" rel="noopener" class="text-emerald-600 hover:text-emerald-700 font-bold text-sm flex items-center gap-2">
+            <i class="fa-brands fa-whatsapp text-lg"></i>
+            <span>341 111 1111</span>
+          </a>
+          <a href="#contacto" class="px-5 py-2.5 rounded-xl text-sm font-bold bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 text-white hover:from-indigo-600 hover:to-cyan-600 transition-all shadow-md hover:shadow-indigo-500/25 active:scale-95">
+            Agendar Visita
+          </a>
+        </div>
+
+        <!-- Botón Menú Móvil -->
+        <div class="flex md:hidden">
+          <button id="mobile-menu-btn" type="button" class="p-2.5 rounded-xl text-slate-700 hover:bg-slate-100 focus:outline-none" aria-label="Abrir menú">
+            <i class="fa-solid fa-bars-staggered text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Menú Móvil Desplegable -->
+    <div id="mobile-menu" class="hidden md:hidden bg-white/98 border-b border-slate-200 px-6 py-6 shadow-2xl transition-all">
+      <div class="flex flex-col space-y-4">
+        <a href="#inicio" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-indigo-600">Inicio</a>
+        <a href="#servicios" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-indigo-600">Servicios & Contratos</a>
+        <a href="#resenas" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-indigo-600">Reseñas de Google</a>
+        <a href="#como-trabajamos" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-indigo-600">Cómo Trabajamos (Paso a Paso)</a>
+        <a href="#contacto" class="mobile-nav-link text-base font-semibold text-slate-700 hover:text-indigo-600">Contacto & Visita</a>
+        <hr class="border-slate-100 my-2">
+        <a href="https://wa.me/5493411111111?text=Hola,%20me%20gustar%C3%ADa%20coordinar%20una%20visita" target="_blank" rel="noopener" class="w-full py-3 text-center rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold flex items-center justify-center gap-2 shadow">
+          <i class="fa-brands fa-whatsapp text-lg"></i>
+          Contactar por WhatsApp
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         2. SECCIÓN HERO (PORTADA GEOMÉTRICA)
+         Malla geométrica, figuras flotantes y tipografía de alto impacto
+         ========================================================================= -->
+    <section id="inicio" class="relative min-h-screen flex items-center justify-center bg-slate-950 text-white overflow-hidden pt-24 pb-16">
+      
+      <!-- Fondo con imagen y overlay geométrico de puntos y líneas -->
+      <div class="absolute inset-0 z-0">
+        <img 
+          src="assets/img/pexels-silverkblack-36714214.jpg" 
+          alt="Asesoría Comercial Vanguardia" 
+          class="w-full h-full object-cover object-center opacity-30 mix-blend-luminosity filter contrast-125"
+        >
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-950 via-slate-900/95 to-indigo-950/90"></div>
+        <div class="absolute inset-0 bg-geo-grid-dark opacity-60"></div>
+      </div>
+
+      <!-- Figuras geométricas flotantes en el espacio (Soft Poly Shapes) -->
+      <div class="floating-geo-shape top-24 left-[8%] w-16 h-16 anim-float-1 opacity-40">
+        <svg viewBox="0 0 100 100" class="w-full h-full stroke-cyan-400 fill-cyan-400/10">
+          <polygon points="50,5 95,90 5,90" stroke-width="3" />
+        </svg>
+      </div>
+
+      <div class="floating-geo-shape bottom-32 right-[10%] w-20 h-20 anim-float-2 opacity-35">
+        <svg viewBox="0 0 100 100" class="w-full h-full stroke-indigo-400 fill-indigo-400/10">
+          <polygon points="50,5 90,25 90,75 50,95 10,75 10,25" stroke-width="2.5" />
+        </svg>
+      </div>
+
+      <div class="floating-geo-shape top-1/3 right-[5%] w-12 h-12 anim-spin-slow opacity-30">
+        <svg viewBox="0 0 100 100" class="w-full h-full stroke-emerald-400 fill-none">
+          <rect x="15" y="15" width="70" height="70" transform="rotate(45 50 50)" stroke-width="2.5" stroke-dasharray="8 6" />
+        </svg>
+      </div>
+
+      <!-- Contenido Central del Hero -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 text-center">
+        
+        <!-- Badge Geométrico Superior -->
+        <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-white/10 backdrop-blur-md border border-cyan-400/30 text-cyan-300 text-xs sm:text-sm font-semibold mb-8 shadow-lg shadow-cyan-950/40">
+          <i class="fa-solid fa-shapes text-xs"></i>
+          <span>Metodología Geométrica Comercial • Rosario & Región</span>
+        </div>
+
+        <!-- Título Principal -->
+        <h1 class="font-heading text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-[1.08] max-w-4xl mx-auto mb-6">
+          Haciendo <span class="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400">rentable</span> tu idea o negocio.
+        </h1>
+
+        <!-- Bajada / Slogan -->
+        <p class="text-slate-300 text-base sm:text-lg md:text-xl max-w-2xl mx-auto font-normal leading-relaxed mb-10">
+          Asesoramiento comercial integral, diagnóstico presencial in-situ, auditoría sin humo y métricas de rentabilidad directa para cada etapa de tu empresa.
+        </p>
+
+        <!-- Botones de Acción CTA -->
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+          <a href="#contacto" class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading font-extrabold text-base bg-gradient-to-r from-cyan-500 via-indigo-600 to-cyan-500 hover:from-cyan-400 hover:to-indigo-500 text-slate-950 hover:text-slate-950 transition-all shadow-lg shadow-cyan-500/25 active:scale-95 flex items-center justify-center gap-2.5">
+            <i class="fa-solid fa-calendar-check text-slate-950"></i>
+            <span>Coordinar Visita Presencial</span>
+          </a>
+          <a href="#servicios" class="w-full sm:w-auto px-8 py-4 rounded-xl font-heading font-bold text-base bg-white/10 hover:bg-white/15 backdrop-blur-md border border-white/20 text-white transition-all active:scale-95 flex items-center justify-center gap-2">
+            <span>Ver Tipos de Contrato</span>
+            <i class="fa-solid fa-arrow-down text-xs text-cyan-400"></i>
+          </a>
+        </div>
+
+        <!-- Tarjetas Facetadas de Métricas y Trayectoria -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+          
+          <div class="p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center hover:border-cyan-400/40 transition-colors">
+            <div class="font-heading font-black text-3xl sm:text-4xl text-cyan-400 mb-1">+15 Años</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Trayectoria Empresarial</div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center hover:border-indigo-400/40 transition-colors">
+            <div class="font-heading font-black text-3xl sm:text-4xl text-indigo-300 mb-1">4.9 ★★★★★</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Reseñas en Google</div>
+          </div>
+
+          <div class="p-5 rounded-2xl bg-white/5 backdrop-blur-md border border-white/10 text-center hover:border-emerald-400/40 transition-colors">
+            <div class="font-heading font-black text-3xl sm:text-4xl text-emerald-400 mb-1">100% In-Situ</div>
+            <div class="text-xs uppercase tracking-wider font-semibold text-slate-300">Visita Presencial Directa</div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         DIVIDER 1: BORDE QUE SE DESCOMPONE EN PEQUEÑOS TRIÁNGULOS (OSCURO A CLARO)
+         Tessellation low-poly con triángulos geométricos que dispersan el borde
+         ========================================================================= -->
+    <div class="triangle-divider bg-slate-50 -mt-1">
+      <svg viewBox="0 0 1440 100" preserveAspectRatio="none" class="w-full h-full">
+        <defs>
+          <linearGradient id="dividerGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#060913" />
+            <stop offset="60%" stop-color="#0a0f1d" />
+            <stop offset="100%" stop-color="#1e1b4b" />
+          </linearGradient>
+        </defs>
+
+        <!-- Base sólida superior con dientes triangulares principales -->
+        <polygon points="0,0 1440,0 1440,35 1380,15 1320,45 1260,20 1200,50 1140,25 1080,48 1020,18 960,42 900,22 840,46 780,18 720,44 660,20 600,48 540,24 480,46 420,18 360,42 300,22 240,48 180,20 120,42 60,18 0,38" fill="url(#dividerGrad1)" />
+
+        <!-- Capa de triángulos intermedios que se desprenden -->
+        <g class="tri-cluster" fill="#0f172a" opacity="0.85">
+          <polygon points="80,38 120,42 100,68" />
+          <polygon points="200,48 240,48 220,74" />
+          <polygon points="320,42 360,42 340,70" />
+          <polygon points="440,46 480,46 460,76" />
+          <polygon points="560,48 600,48 580,72" />
+          <polygon points="680,44 720,44 700,74" />
+          <polygon points="800,46 840,46 820,70" />
+          <polygon points="920,42 960,42 940,72" />
+          <polygon points="1040,48 1080,48 1060,76" />
+          <polygon points="1160,50 1200,50 1180,78" />
+          <polygon points="1280,45 1320,45 1300,70" />
+          <polygon points="1390,35 1430,35 1410,65" />
+        </g>
+
+        <!-- Capa de pequeños triángulos dispersos flotantes -->
+        <g class="tri-cluster" fill="#6366f1" opacity="0.45">
+          <polygon points="140,65 160,65 150,82" />
+          <polygon points="270,68 290,68 280,85" />
+          <polygon points="390,66 410,66 400,84" />
+          <polygon points="510,70 530,70 520,88" />
+          <polygon points="630,68 650,68 640,86" />
+          <polygon points="750,72 770,72 760,90" />
+          <polygon points="870,68 890,68 880,86" />
+          <polygon points="990,70 1010,70 1000,88" />
+          <polygon points="1110,68 1130,68 1120,85" />
+          <polygon points="1230,72 1250,72 1240,90" />
+          <polygon points="1350,65 1370,65 1360,82" />
+        </g>
+
+        <!-- Micro-triángulos finales que se disuelven en la sección clara -->
+        <g fill="#06b6d4" opacity="0.6">
+          <polygon points="220,82 230,82 225,92" />
+          <polygon points="460,84 470,84 465,94" />
+          <polygon points="700,82 710,82 705,92" />
+          <polygon points="940,80 950,80 945,90" />
+          <polygon points="1180,86 1190,86 1185,96" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- =========================================================================
+         3. SECCIÓN SERVICIOS & CONTRATOS (TARJETAS GEOMÉTRICAS)
+         Flexibilidad de planes según la etapa del negocio con contraste AAA
+         ========================================================================= -->
+    <section id="servicios" class="py-24 bg-slate-50 bg-geo-grid-light relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de la Sección -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-indigo-50 border border-indigo-200 text-indigo-700 text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-shapes text-[11px]"></i>
+            <span>Modalidades de Contratación</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight mb-4">
+            Distintos contratos posibles para tu etapa actual
+          </h2>
+          <p class="text-slate-600 text-base sm:text-lg leading-relaxed">
+            Cada empresa tiene desafíos particulares. Diseñamos modalidades de contratación flexibles adaptadas a tu necesidad puntual o crecimiento continuo.
+          </p>
+        </div>
+
+        <!-- Grilla de los 3 Contratos Geométricos -->
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-stretch pt-4">
+          
+          <!-- CONTRATO 1: ANÁLISIS DESDE 0 -->
+          <div class="contract-geo-card p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-slate-100 text-slate-700 border border-slate-200">
+                  Emprendimientos
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-slate-100 flex items-center justify-center text-slate-700">
+                  <i class="fa-solid fa-lightbulb text-lg text-amber-500"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl font-black text-slate-900 mb-2">Análisis desde 0</h3>
+              <p class="text-indigo-600 font-bold text-xs sm:text-sm mb-4 italic">
+                “Asesoramiento integral para arrancar tu nuevo negocio”
+              </p>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                Diseñado para quienes van a iniciar un proyecto y buscan validar viabilidad comercial, estructura de costos y plan de arranque sin dar pasos en falso.
+              </p>
+
+              <div class="border-t border-slate-100 pt-5 mb-8">
+                <div class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-3">Incluye:</div>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Estudio de viabilidad comercial del proyecto</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Estructura de costos fijos, variables y punto de equilibrio</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Plan de lanzamiento escalonado y pricing inicial</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Visitas presenciales y asesoría directa</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" data-plan-name="Análisis desde 0" class="select-plan-btn w-full py-3.5 px-4 rounded-xl font-heading font-bold text-sm bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 transition-all text-center">
+              Elegir este contrato
+            </button>
+          </div>
+
+          <!-- CONTRATO 2: ANÁLISIS DE NEGOCIO (MÁS SOLICITADO - DESTACADO CON MÁXIMO CONTRASTE) -->
+          <div class="contract-geo-card contract-geo-featured p-8 flex flex-col justify-between">
+            <!-- Badge Superior -->
+            <div class="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gradient-to-r from-cyan-400 to-indigo-400 text-slate-950 text-[11px] font-heading font-black uppercase tracking-wider px-4 py-0.5 rounded-full shadow-lg">
+              ★ Más Solicitado
+            </div>
+
+            <div>
+              <div class="flex items-center justify-between mb-6 pt-1">
+                <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-white/20 text-cyan-200 border border-white/20">
+                  Negocios en Marcha
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center text-cyan-400">
+                  <i class="fa-solid fa-briefcase text-lg"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl sm:text-3xl font-black text-white mb-2">Análisis de negocio</h3>
+              <p class="text-cyan-300 font-bold text-xs sm:text-sm mb-4 italic">
+                “Seguimiento de mercado y asesoramiento para mejorar rentabilidad”
+              </p>
+              <p class="text-slate-200 text-xs sm:text-sm leading-relaxed mb-6">
+                Para negocios operativos que buscan ordenar números, detener pérdidas invisibles y multiplicar la ganancia neta mediante auditoría y estrategia continua.
+              </p>
+
+              <div class="border-t border-white/15 pt-5 mb-8">
+                <div class="text-xs font-bold uppercase text-cyan-300 tracking-wider mb-3">Incluye:</div>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-100">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                    <span>Auditoría financiera y detección de fugas de dinero</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                    <span>Estrategia de precios (pricing) y márgenes de ganancia</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                    <span>Análisis de competencia directa y mercado local</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-circle-check text-cyan-400 mt-0.5"></i>
+                    <span>Visitas presenciales y seguimiento mensual de métricas</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" data-plan-name="Análisis de negocio" class="select-plan-btn w-full py-4 px-4 rounded-xl font-heading font-black text-sm bg-gradient-to-r from-cyan-400 via-sky-300 to-indigo-400 hover:from-cyan-300 hover:to-indigo-300 text-slate-950 transition-all text-center shadow-lg shadow-cyan-400/25 active:scale-95">
+              Elegir este contrato
+            </button>
+          </div>
+
+          <!-- CONTRATO 3: ANÁLISIS DE PRODUCTO -->
+          <div class="contract-geo-card p-8 flex flex-col justify-between">
+            <div>
+              <div class="flex items-center justify-between mb-6">
+                <span class="text-xs font-bold uppercase px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 border border-emerald-200">
+                  Lanzamientos
+                </span>
+                <div class="w-10 h-10 rounded-xl bg-emerald-50 flex items-center justify-center text-emerald-600">
+                  <i class="fa-solid fa-box-open text-lg"></i>
+                </div>
+              </div>
+
+              <h3 class="font-heading text-2xl font-black text-slate-900 mb-2">Análisis de producto</h3>
+              <p class="text-emerald-700 font-bold text-xs sm:text-sm mb-4 italic">
+                “Asesoramiento para lanzar un nuevo producto al mercado”
+              </p>
+              <p class="text-slate-600 text-xs sm:text-sm leading-relaxed mb-6">
+                Diseñamos la estrategia comercial y de posicionamiento precisa para que tu nuevo lanzamiento tenga tracción inmediata y no fracase por falta de mercado.
+              </p>
+
+              <div class="border-t border-slate-100 pt-5 mb-8">
+                <div class="text-xs font-bold uppercase text-slate-400 tracking-wider mb-3">Incluye:</div>
+                <ul class="space-y-3 text-xs sm:text-sm text-slate-700">
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Estudio de público objetivo y segmentación de clientes</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Testeo de propuesta de valor y ventaja competitiva</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Estrategia de lanzamiento comercial y canales de venta</span>
+                  </li>
+                  <li class="flex items-start gap-2.5">
+                    <i class="fa-solid fa-check text-emerald-500 mt-0.5"></i>
+                    <span>Visitas presenciales y soporte de optimización</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <button type="button" data-plan-name="Análisis de producto" class="select-plan-btn w-full py-3.5 px-4 rounded-xl font-heading font-bold text-sm bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-800 transition-all text-center">
+              Elegir este contrato
+            </button>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. SECCIÓN RESEÑAS DE GOOGLE (HEXÁGONOS Y TESTIMONIOS VERIFICADOS)
+         Opiniones de clientes reales con calificación 4.9★
+         ========================================================================= -->
+    <section id="resenas" class="py-24 bg-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
+          <div>
+            <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-amber-50 border border-amber-200 text-amber-800 text-xs font-bold uppercase tracking-wider mb-3">
+              <i class="fa-solid fa-star text-amber-500 text-[11px]"></i>
+              <span>Google Reviews Verificadas</span>
+            </div>
+            <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold text-slate-900 tracking-tight">
+              Lo que opinan nuestros clientes
+            </h2>
+          </div>
+
+          <!-- Badge Oficial de Calificación Google -->
+          <div class="flex items-center gap-4 bg-slate-50 p-4 rounded-2xl border border-slate-200 shadow-sm">
+            <svg class="w-10 h-10 flex-shrink-0" viewBox="0 0 24 24">
+              <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+              <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+              <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+              <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+            </svg>
+            <div>
+              <div class="flex items-center gap-1.5 text-amber-500 text-sm">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span class="font-extrabold text-slate-900 ml-1">4.9 / 5</span>
+              </div>
+              <p class="text-[11px] text-slate-500 font-semibold mt-0.5">Más de 80 opiniones verificadas</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- 1. VISTA EN ESCRITORIO (DESKTOP): Grilla de 3 Testimonios -->
+        <div class="hidden md:grid md:grid-cols-3 gap-8">
+          
+          <!-- Testimonio 1 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic mb-6">
+                “El análisis de negocio nos permitió detectar fugas de dinero en proveedores que no estábamos viendo. En dos meses recuperamos el control de la caja y aumentamos nuestro margen neto.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white font-black text-sm">
+                MR
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-sm text-slate-900">Martín R.</div>
+                <div class="text-xs text-slate-500">Comercio Minorista • Rosario</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 2 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic mb-6">
+                “Hicimos el análisis desde cero para abrir nuestra segunda sucursal. Nos ordenaron la estructura de costos de manera clara y sin tecnicismos innecesarios. Muy recomendables.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-black text-sm">
+                LG
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-sm text-slate-900">Lucía G.</div>
+                <div class="text-xs text-slate-500">Emprendimiento Gastronómico • Funes</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Testimonio 3 -->
+          <div class="p-8 rounded-2xl bg-slate-50 border border-slate-200 hover:border-indigo-300 transition-colors flex flex-col justify-between">
+            <div>
+              <div class="flex items-center gap-1 text-amber-500 text-xs mb-4">
+                <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              </div>
+              <p class="text-slate-700 text-sm sm:text-base leading-relaxed italic mb-6">
+                “Excelente atención y seguimiento. Muy directos y prácticos: vinieron a la empresa, evaluaron números reales y nos acompañaron paso a paso en la ejecución de las mejoras.”
+              </p>
+            </div>
+            <div class="flex items-center gap-3 pt-4 border-t border-slate-200">
+              <div class="w-10 h-10 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-600 flex items-center justify-center text-white font-black text-sm">
+                EM
+              </div>
+              <div>
+                <div class="font-heading font-extrabold text-sm text-slate-900">Esteban M.</div>
+                <div class="text-xs text-slate-500">Distribuidora de Insumos • San Lorenzo</div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- 2. VISTA EN MÓVILES (MOBILE): 1 Reseña de alto a la vez, rotando a la izquierda cada unos segundos -->
+        <div class="block md:hidden max-w-lg mx-auto">
+          <div id="mobile-reviews-track-d" class="mobile-reviews-track bg-slate-50 border border-slate-200 shadow-sm relative">
+            
+            <!-- Slide 1 -->
+            <div class="mobile-review-slide is-active p-6 sm:p-7 flex flex-col justify-between" data-slide-index="0">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex text-amber-500 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-base"></i>
+                </div>
+                <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
+                  “El análisis de negocio nos permitió detectar fugas de dinero en proveedores que no estábamos viendo. En dos meses recuperamos el control de la caja y aumentamos nuestro margen neto.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-cyan-500 to-indigo-600 flex items-center justify-center text-white font-bold text-xs">
+                  MR
+                </div>
+                <div>
+                  <div class="font-heading font-extrabold text-sm text-slate-900">Martín R.</div>
+                  <div class="text-[11px] text-slate-500">Comercio Minorista • Rosario</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 2 -->
+            <div class="mobile-review-slide p-6 sm:p-7 flex flex-col justify-between" data-slide-index="1">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex text-amber-500 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-base"></i>
+                </div>
+                <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
+                  “Hicimos el análisis desde cero para abrir nuestra segunda sucursal. Nos ordenaron la estructura de costos de manera clara y sin tecnicismos innecesarios. Muy recomendables.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-indigo-500 to-purple-600 flex items-center justify-center text-white font-bold text-xs">
+                  LG
+                </div>
+                <div>
+                  <div class="font-heading font-extrabold text-sm text-slate-900">Lucía G.</div>
+                  <div class="text-[11px] text-slate-500">Emprendimiento Gastronómico • Funes</div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Slide 3 -->
+            <div class="mobile-review-slide p-6 sm:p-7 flex flex-col justify-between" data-slide-index="2">
+              <div>
+                <div class="flex items-center justify-between mb-3">
+                  <div class="flex text-amber-500 text-xs">
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                  </div>
+                  <i class="fa-brands fa-google text-slate-300 text-base"></i>
+                </div>
+                <p class="text-slate-700 text-sm leading-relaxed italic mb-4">
+                  “Excelente atención y seguimiento. Muy directos y prácticos: vinieron a la empresa, evaluaron números reales y nos acompañaron paso a paso en la ejecución de las mejoras.”
+                </p>
+              </div>
+              <div class="flex items-center gap-3 pt-3 border-t border-slate-200">
+                <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-emerald-500 to-cyan-600 flex items-center justify-center text-white font-bold text-xs">
+                  EM
+                </div>
+                <div>
+                  <div class="font-heading font-extrabold text-sm text-slate-900">Esteban M.</div>
+                  <div class="text-[11px] text-slate-500">Distribuidora de Insumos • San Lorenzo</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Indicadores de Puntos y Flechas de control móvil -->
+          <div class="flex items-center justify-between mt-4 px-2">
+            <button type="button" id="prev-review-btn-d" class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 flex items-center justify-center text-xs" aria-label="Reseña anterior">
+              <i class="fa-solid fa-chevron-left"></i>
+            </button>
+            
+            <div class="flex items-center gap-2" id="review-dots-container-d">
+              <button type="button" class="mobile-review-dot-d w-6 h-2 rounded-full bg-indigo-600 transition-all" data-dot-index="0" aria-label="Reseña 1"></button>
+              <button type="button" class="mobile-review-dot-d w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all" data-dot-index="1" aria-label="Reseña 2"></button>
+              <button type="button" class="mobile-review-dot-d w-2 h-2 rounded-full bg-slate-300 hover:bg-slate-400 transition-all" data-dot-index="2" aria-label="Reseña 3"></button>
+            </div>
+
+            <button type="button" id="next-review-btn-d" class="w-8 h-8 rounded-full bg-slate-200 text-slate-700 hover:bg-slate-300 flex items-center justify-center text-xs" aria-label="Siguiente reseña">
+              <i class="fa-solid fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. SECCIÓN ¿CÓMO TRABAJAMOS? (PASO A PASO CON ANIMACIÓN "CIRCLE BURST")
+         Las tarjetas salen de un círculo en un costado la primera vez que se carga
+         ========================================================================= -->
+    <section id="como-trabajamos" class="py-24 bg-slate-900 text-white relative overflow-hidden">
+      
+      <!-- Fondo tecnológico con malla y degradados -->
+      <div class="absolute inset-0 bg-geo-grid-dark opacity-35"></div>
+
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Encabezado de la Sección -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-400/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-diagram-project text-[11px]"></i>
+            <span>Metodología en 4 Etapas</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+            ¿Cómo trabajamos?
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Un proceso ágil, transparente y directo para transformar la rentabilidad de tu negocio mediante diagnóstico y acción in-situ.
+          </p>
+          
+          <!-- Llamado explícito a visita presencial -->
+          <div class="mt-6 inline-flex items-center gap-3 px-5 py-2.5 rounded-xl bg-emerald-950/60 border border-emerald-500/40 text-emerald-300 text-xs sm:text-sm font-semibold shadow-lg">
+            <i class="fa-solid fa-building text-emerald-400"></i>
+            <span>Coordinamos una visita presencial a tu empresa o local</span>
+          </div>
+        </div>
+
+        <!-- ESCENARIO PRINCIPAL "CIRCLE BURST": CÍRCULO EN EL COSTADO + TARJETAS DESPLEGADAS -->
+        <div class="relative grid grid-cols-1 lg:grid-cols-12 gap-8 items-center pt-6">
+          
+          <!-- COLUMNA IZQUIERDA: EL CÍRCULO NÚCLEO / PORTAL GEOMÉTRICO -->
+          <div class="lg:col-span-4 flex flex-col items-center justify-center text-center">
+            
+            <div class="relative mb-6">
+              <!-- Anillos concéntricos giratorios -->
+              <div class="portal-ring-middle"></div>
+              <div class="portal-ring-outer"></div>
+
+              <!-- El Círculo Núcleo -->
+              <div id="portal-circle-core" class="geo-portal-circle">
+                <div class="flex flex-col items-center justify-center p-4">
+                  <div class="w-12 h-12 rounded-full bg-gradient-to-tr from-cyan-400 to-indigo-500 flex items-center justify-center text-slate-950 shadow-lg mb-2">
+                    <i class="fa-solid fa-compass-drafting text-lg"></i>
+                  </div>
+                  <span class="font-heading font-black text-xs uppercase tracking-widest text-cyan-300">
+                    NÚCLEO 4 FASES
+                  </span>
+                  <span class="text-[9px] uppercase tracking-wider text-slate-400 font-semibold mt-0.5">
+                    Metodología
+                  </span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA DERECHA: CLUSTER DE LAS 4 TARJETAS CON CONECTOR SVG -->
+          <div class="lg:col-span-8 relative">
+            
+            <!-- Capa de Rayos Conectores SVG dinámicos -->
+            <svg id="portal-connector-svg" class="step-connection-line hidden lg:block"></svg>
+
+            <!-- Grilla 2x2 de las 4 Tarjetas que nacen del círculo -->
+            <div id="step-cards-cluster" class="step-cards-cluster grid grid-cols-1 sm:grid-cols-2 gap-6 relative z-10">
+              
+              <!-- FASE 1: CONTACTO INICIAL -->
+              <div class="step-burst-card p-6 sm:p-7" data-step-index="0">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-heading font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">
+                    01
+                  </span>
+                  <div class="w-9 h-9 rounded-lg bg-indigo-50 text-indigo-600 flex items-center justify-center text-sm font-bold">
+                    <i class="fa-solid fa-comments"></i>
+                  </div>
+                </div>
+                <h3 class="font-heading font-extrabold text-xl text-slate-900 mb-2">
+                  Contacto Inicial
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Nos escribís por WhatsApp o formulario. Conocemos tu rubro, situación comercial actual y los principales desafíos que querés resolver.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-cyan-600">
+                  <i class="fa-solid fa-bolt text-[10px]"></i>
+                  <span>Respuesta rápida sin burocracia</span>
+                </div>
+              </div>
+
+              <!-- FASE 2: COORDINACIÓN DE VISITA -->
+              <div class="step-burst-card p-6 sm:p-7" data-step-index="1">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-heading font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">
+                    02
+                  </span>
+                  <div class="w-9 h-9 rounded-lg bg-cyan-50 text-cyan-600 flex items-center justify-center text-sm font-bold">
+                    <i class="fa-solid fa-calendar-days"></i>
+                  </div>
+                </div>
+                <h3 class="font-heading font-extrabold text-xl text-slate-900 mb-2">
+                  Coordinación de Visita
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Fijamos día y horario para visitarte presencialmente en tu local, empresa o depósito en Rosario y zona de influencia.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-cyan-600">
+                  <i class="fa-solid fa-location-dot text-[10px]"></i>
+                  <span>Visita presencial in-situ</span>
+                </div>
+              </div>
+
+              <!-- FASE 3: DIAGNÓSTICO Y PROPUESTA -->
+              <div class="step-burst-card p-6 sm:p-7" data-step-index="2">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-heading font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">
+                    03
+                  </span>
+                  <div class="w-9 h-9 rounded-lg bg-emerald-50 text-emerald-600 flex items-center justify-center text-sm font-bold">
+                    <i class="fa-solid fa-magnifying-glass-chart"></i>
+                  </div>
+                </div>
+                <h3 class="font-heading font-extrabold text-xl text-slate-900 mb-2">
+                  Diagnóstico y Propuesta
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Evaluamos tus números, estructura comercial y competencia. Te presentamos el plan de acción concreto y el contrato más conveniente.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-emerald-600">
+                  <i class="fa-solid fa-file-invoice-dollar text-[10px]"></i>
+                  <span>Claridad total en números</span>
+                </div>
+              </div>
+
+              <!-- FASE 4: EJECUCIÓN Y RESULTADOS -->
+              <div class="step-burst-card p-6 sm:p-7" data-step-index="3">
+                <div class="flex items-center justify-between mb-4">
+                  <span class="font-heading font-black text-2xl text-transparent bg-clip-text bg-gradient-to-r from-cyan-500 to-indigo-500">
+                    04
+                  </span>
+                  <div class="w-9 h-9 rounded-lg bg-amber-50 text-amber-600 flex items-center justify-center text-sm font-bold">
+                    <i class="fa-solid fa-chart-line"></i>
+                  </div>
+                </div>
+                <h3 class="font-heading font-extrabold text-xl text-slate-900 mb-2">
+                  Ejecución y Resultados
+                </h3>
+                <p class="text-slate-600 text-xs sm:text-sm leading-relaxed">
+                  Acompañamiento directo en la implementación de precios, compras, ventas y optimización para multiplicar la rentabilidad neta.
+                </p>
+                <div class="mt-4 pt-3 border-t border-slate-100 flex items-center gap-2 text-[11px] font-semibold text-amber-600">
+                  <i class="fa-solid fa-trophy text-[10px]"></i>
+                  <span>Medición continua de rentabilidad</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+    <!-- =========================================================================
+         DIVIDER 2: BORDE QUE SE DESCOMPONE EN PEQUEÑOS TRIÁNGULOS (OSCURO A OSCURO)
+         Transición angular hacia la sección de contacto
+         ========================================================================= -->
+    <div class="triangle-divider bg-slate-900 -mt-1">
+      <svg viewBox="0 0 1440 80" preserveAspectRatio="none" class="w-full h-full">
+        <polygon points="0,0 1440,0 1440,25 1360,45 1280,20 1200,48 1120,18 1040,42 960,20 880,45 800,18 720,44 640,22 560,46 480,18 400,42 320,20 240,48 160,22 80,44 0,25" fill="#060913" />
+        <g fill="#22d3ee" opacity="0.35">
+          <polygon points="120,38 135,38 127,52" />
+          <polygon points="360,35 375,35 367,50" />
+          <polygon points="600,40 615,40 607,55" />
+          <polygon points="840,38 855,38 847,52" />
+          <polygon points="1080,42 1095,42 1087,58" />
+          <polygon points="1320,35 1335,35 1327,50" />
+        </g>
+      </svg>
+    </div>
+
+    <!-- =========================================================================
+         6. SECCIÓN CONTACTO & VISITA (FORMULARIO GEOMÉTRICO)
+         Formulario con Web3Forms pre-cargable y canales directos
+         ========================================================================= -->
+    <section id="contacto" class="py-24 bg-slate-950 text-white relative">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-cyan-950/80 border border-cyan-400/30 text-cyan-300 text-xs font-bold uppercase tracking-wider mb-3">
+            <i class="fa-solid fa-paper-plane text-[11px]"></i>
+            <span>Mesa de Entrada & Contacto</span>
+          </div>
+          <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-4">
+            Hablemos de los números de tu negocio
+          </h2>
+          <p class="text-slate-300 text-base sm:text-lg leading-relaxed">
+            Escribinos para coordinar una visita presencial. Te responderemos en el día para fijar fecha y hora.
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-start max-w-5xl mx-auto">
+          
+          <!-- COLUMNA IZQUIERDA: INFORMACIÓN Y CANALES -->
+          <div class="lg:col-span-5 space-y-6">
+            
+            <!-- Tarjeta WhatsApp -->
+            <a href="https://wa.me/5493411111111?text=Hola,%20me%20comunico%20desde%20la%20web%20para%20coordinar%20una%20visita" target="_blank" rel="noopener" class="p-6 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-emerald-500/40 transition-all flex items-center gap-4 group">
+              <div class="w-12 h-12 rounded-xl bg-emerald-500/20 text-emerald-400 flex items-center justify-center text-2xl group-hover:scale-110 transition-transform">
+                <i class="fa-brands fa-whatsapp"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-400">WhatsApp Oficial</div>
+                <div class="font-heading font-black text-lg text-white">341 111 1111</div>
+                <div class="text-xs text-emerald-400 font-semibold mt-0.5">Mensaje directo instantáneo →</div>
+              </div>
+            </a>
+
+            <!-- Tarjeta Email -->
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-cyan-500/20 text-cyan-400 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-envelope"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Correo Electrónico</div>
+                <div class="font-heading font-bold text-base text-white">ejemplo@mail.com</div>
+                <div class="text-xs text-slate-400 font-medium mt-0.5">Atención comercial y presupuestos</div>
+              </div>
+            </div>
+
+            <!-- Tarjeta Ubicación -->
+            <div class="p-6 rounded-2xl bg-white/5 border border-white/10 flex items-center gap-4">
+              <div class="w-12 h-12 rounded-xl bg-indigo-500/20 text-indigo-400 flex items-center justify-center text-xl">
+                <i class="fa-solid fa-location-dot"></i>
+              </div>
+              <div>
+                <div class="text-xs font-bold uppercase tracking-wider text-slate-400">Zona de Cobertura</div>
+                <div class="font-heading font-bold text-base text-white">Rosario & Región, Santa Fe</div>
+                <div class="text-xs text-slate-400 font-medium mt-0.5">Visitas presenciales en tu empresa</div>
+              </div>
+            </div>
+
+            <!-- Banner Asesoría Presencial -->
+            <div class="p-5 rounded-2xl bg-gradient-to-br from-indigo-950/70 to-slate-900 border border-indigo-500/30">
+              <div class="flex items-center gap-2.5 text-xs font-bold text-indigo-300 uppercase tracking-wider mb-1.5">
+                <i class="fa-solid fa-handshake"></i>
+                <span>Diagnóstico Presencial</span>
+              </div>
+              <p class="text-xs text-slate-300 leading-relaxed">
+                Creemos en mirar el negocio desde adentro. Las reuniones presenciales nos permiten entender la dinámica de tu equipo, producto y clientes.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- COLUMNA DERECHA: FORMULARIO WEB3FORMS -->
+          <div class="lg:col-span-7 p-8 rounded-2xl bg-white text-slate-900 shadow-2xl border border-slate-100 relative">
+            
+            <h3 class="font-heading font-black text-2xl text-slate-900 mb-1">
+              Coordinar Visita de Asesoramiento
+            </h3>
+            <p class="text-slate-600 text-xs sm:text-sm mb-6">
+              Completá los datos y te responderemos a la brevedad.
+            </p>
+
+            <!-- Mensaje de Estado / Alerta -->
+            <div id="form-status-msg" class="hidden"></div>
+
+            <form id="contact-form-geo" class="space-y-4">
+              <!-- Web3Forms Access Key (Fácilmente configurable) -->
+              <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE">
+              <input type="hidden" name="subject" value="Nueva solicitud de asesoramiento - Landing D">
+              <input type="hidden" name="from_name" value="Vanguardia Asesores Web">
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="form-nombre" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Nombre y Apellido</label>
+                  <input type="text" id="form-nombre" name="nombre" required placeholder="Ej: Juan Pérez" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none text-sm transition-all bg-slate-50">
+                </div>
+                <div>
+                  <label for="form-telefono" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Teléfono / WhatsApp</label>
+                  <input type="tel" id="form-telefono" name="telefono" required placeholder="Ej: 341 123 4567" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none text-sm transition-all bg-slate-50">
+                </div>
+              </div>
+
+              <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div>
+                  <label for="form-email" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Correo Electrónico</label>
+                  <input type="email" id="form-email" name="email" required placeholder="juan@ejemplo.com" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none text-sm transition-all bg-slate-50">
+                </div>
+                <div>
+                  <label for="form-plan-select" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Contrato de Interés</label>
+                  <select id="form-plan-select" name="tipo_contrato" class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none text-sm transition-all bg-slate-50">
+                    <option value="Análisis de negocio">Análisis de negocio (Más solicitado)</option>
+                    <option value="Análisis desde 0">Análisis desde 0</option>
+                    <option value="Análisis de producto">Análisis de producto</option>
+                    <option value="Consulta General">Consulta General / Visita</option>
+                  </select>
+                </div>
+              </div>
+
+              <div>
+                <label for="form-descripcion" class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1.5">Detalles de tu Negocio o Consulta</label>
+                <textarea id="form-descripcion" name="mensaje" rows="4" required placeholder="Contanos brevemente sobre tu negocio, rubro y qué objetivo te gustaría alcanzar..." class="w-full px-4 py-3 rounded-xl border border-slate-200 focus:border-indigo-600 focus:ring-2 focus:ring-indigo-100 outline-none text-sm transition-all bg-slate-50"></textarea>
+              </div>
+
+              <button type="submit" id="form-submit-btn" class="w-full py-4 rounded-xl font-heading font-black text-sm bg-gradient-to-r from-slate-900 via-indigo-900 to-slate-900 hover:from-indigo-600 hover:to-cyan-600 text-white transition-all shadow-lg shadow-indigo-900/20 active:scale-95 flex items-center justify-center gap-2">
+                <i class="fa-solid fa-paper-plane text-cyan-300"></i>
+                <span>Enviar Solicitud de Visita</span>
+              </button>
+
+              <p class="text-[11px] text-center text-slate-500 font-medium pt-2">
+                Tus datos son 100% confidenciales. Nos comunicaremos directamente sin intermediarios.
+              </p>
+            </form>
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================================
+       7. PIE DE PÁGINA (FOOTER GEOMÉTRICO)
+       ========================================================================= -->
+  <footer class="bg-slate-950 border-t border-white/10 text-slate-400 py-12 text-sm">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-6">
+        
+        <div class="flex items-center gap-3">
+          <div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-brand-950 via-indigo-900 to-cyan-500 flex items-center justify-center text-white">
+            <i class="fa-solid fa-shapes text-sm text-cyan-300"></i>
+          </div>
+          <span class="font-heading font-bold text-lg text-white">
+            Vanguardia<span class="text-cyan-400">.</span>
+          </span>
+          <span class="text-xs text-slate-500 pl-2 border-l border-slate-700">Asesoría Comercial & Rentabilidad</span>
+        </div>
+
+        <div class="flex items-center gap-6 text-xs font-semibold">
+          <a href="#inicio" class="hover:text-white transition-colors">Inicio</a>
+          <a href="#servicios" class="hover:text-white transition-colors">Servicios & Contratos</a>
+          <a href="#resenas" class="hover:text-white transition-colors">Reseñas</a>
+          <a href="#como-trabajamos" class="hover:text-white transition-colors">Cómo Trabajamos</a>
+          <a href="#contacto" class="hover:text-white transition-colors">Contacto</a>
+        </div>
+
+        <div class="text-xs text-slate-500 text-center md:text-right">
+          © 2026 Vanguardia Asesores. Todos los derechos reservados. Rosario, Santa Fe.
+        </div>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       8. BOTÓN FLOTANTE DE WHATSAPP GEOMÉTRICO
+       ========================================================================= -->
+  <div class="wa-geo-btn">
+    <div class="wa-pulse-hex"></div>
+    <a href="https://wa.me/5493411111111?text=Hola,%20me%20comunico%20desde%20la%20web%20para%20coordinar%20una%20visita" target="_blank" rel="noopener" class="w-14 h-14 rounded-2xl bg-emerald-500 hover:bg-emerald-400 text-white flex items-center justify-center text-2xl shadow-xl shadow-emerald-500/30 transition-transform active:scale-95" aria-label="Contactar por WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+  </div>
+
+  <!-- Script Principal -->
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

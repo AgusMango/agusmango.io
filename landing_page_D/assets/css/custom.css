@@ -1,0 +1,490 @@
+/* ==========================================================================
+   LANDING PAGE D - GEOMETRIC DESIGN SYSTEM
+   Vanguardia Asesores | Asesoría Comercial & Rentabilidad
+   - Estilo geométrico suave, moderno y tecnológico
+   - Bordes que se descomponen en pequeños triángulos (Low-poly tessellation)
+   - Animación "Circle Burst": las tarjetas del paso a paso emergen de un círculo
+   - Figuras geométricas flotantes con parallax y micro-interacciones
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --color-primary-950: #060913;
+  --color-primary-900: #0a0f1d;
+  --color-primary-850: #0f172a;
+  --color-primary-800: #1e293b;
+  --color-cyan-400: #22d3ee;
+  --color-cyan-500: #06b6d4;
+  --color-indigo-500: #6366f1;
+  --color-indigo-600: #4f46e5;
+  --color-emerald-400: #34d399;
+  --color-emerald-500: #10b981;
+  --color-amber-400: #fbbf24;
+  --color-amber-500: #f59e0b;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  overflow-x: hidden;
+  background-color: #ffffff;
+  color: #1e293b;
+  scroll-behavior: smooth;
+}
+
+h1, h2, h3, h4, .font-heading {
+  font-family: 'Outfit', sans-serif;
+}
+
+/* ==========================================================================
+   1. BORDES DESCOMPUESTOS EN PEQUEÑOS TRIÁNGULOS (DECOMPOSING TRIANGLE DIVIDERS)
+   ========================================================================== */
+
+.triangle-divider {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.triangle-divider svg {
+  display: block;
+  width: 100%;
+  height: 60px;
+}
+
+@media (min-width: 768px) {
+  .triangle-divider svg {
+    height: 90px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .triangle-divider svg {
+    height: 110px;
+  }
+}
+
+/* Decomposing Triangle Mesh Cluster */
+.tri-cluster polygon {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.6s ease;
+}
+
+.tri-cluster:hover polygon {
+  transform: translateY(-4px) scale(1.04);
+}
+
+/* Floating Triangle Particles */
+.floating-geo-shape {
+  position: absolute;
+  pointer-events: none;
+  user-select: none;
+  z-index: 1;
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-16px) rotate(8deg);
+  }
+}
+
+@keyframes floatReverse {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(18px) rotate(-10deg);
+  }
+}
+
+@keyframes spinSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 0.9;
+  }
+}
+
+.anim-float-1 {
+  animation: floatSlow 7s ease-in-out infinite;
+}
+
+.anim-float-2 {
+  animation: floatReverse 9s ease-in-out infinite;
+}
+
+.anim-spin-slow {
+  animation: spinSlow 32s linear infinite;
+}
+
+.anim-spin-reverse {
+  animation: spinSlow 40s linear infinite reverse;
+}
+
+.anim-pulse-glow {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+/* ==========================================================================
+   2. ANIMACIÓN "CIRCLE BURST" (PASO A PASO QUE NACE DE UN CÍRCULO EN EL COSTADO)
+   ========================================================================== */
+
+/* El Círculo Núcleo / Portal */
+.geo-portal-circle {
+  width: 160px;
+  height: 160px;
+  position: relative;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle at 35% 35%, #1e1b4b 0%, #0a0f1d 85%);
+  box-shadow: 0 0 45px rgba(99, 102, 241, 0.35),
+              inset 0 0 30px rgba(34, 211, 238, 0.25);
+  border: 2px solid rgba(99, 102, 241, 0.4);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+  user-select: none;
+}
+
+@media (min-width: 1024px) {
+  .geo-portal-circle {
+    width: 210px;
+    height: 210px;
+  }
+}
+
+.geo-portal-circle:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(99, 102, 241, 0.55),
+              inset 0 0 40px rgba(34, 211, 238, 0.4);
+}
+
+/* Anillos concéntricos giratorios */
+.portal-ring-outer {
+  position: absolute;
+  inset: -14px;
+  border-radius: 50%;
+  border: 2px dashed rgba(34, 211, 238, 0.35);
+  animation: spinSlow 28s linear infinite;
+  pointer-events: none;
+}
+
+.portal-ring-middle {
+  position: absolute;
+  inset: -28px;
+  border-radius: 50%;
+  border: 1px dotted rgba(99, 102, 241, 0.3);
+  animation: spinSlow 38s linear infinite reverse;
+  pointer-events: none;
+}
+
+/* Conectores SVG dinámicos */
+.step-connection-line {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 5;
+}
+
+.step-ray-path {
+  stroke-dasharray: 8 6;
+  animation: dashMove 2.5s linear infinite;
+}
+
+@keyframes dashMove {
+  from {
+    stroke-dashoffset: 0;
+  }
+  to {
+    stroke-dashoffset: -28;
+  }
+}
+
+/* Tarjetas del Paso a Paso */
+.step-burst-card {
+  position: relative;
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 18px;
+  box-shadow: 0 10px 30px -5px rgba(15, 23, 42, 0.08),
+              0 2px 8px rgba(15, 23, 42, 0.04);
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+              box-shadow 0.4s ease,
+              border-color 0.4s ease;
+  overflow: hidden;
+}
+
+.step-burst-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background: linear-gradient(90deg, #6366f1, #06b6d4);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.step-burst-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 40px -10px rgba(99, 102, 241, 0.2),
+              0 4px 12px rgba(15, 23, 42, 0.08);
+  border-color: #818cf8;
+}
+
+.step-burst-card:hover::before {
+  opacity: 1;
+}
+
+/* Estado de preparación antes de la animación burst */
+.step-cards-cluster:not(.burst-executed) .step-burst-card {
+  opacity: 0;
+  transform: translate(var(--burst-origin-x, -80px), var(--burst-origin-y, 0px)) scale(0.08);
+  pointer-events: none;
+}
+
+/* Animación cuando se activa por IntersectionObserver */
+.step-cards-cluster.burst-executed .step-burst-card {
+  animation: flyOutFromCircle 0.85s cubic-bezier(0.34, 1.35, 0.64, 1) forwards;
+}
+
+.step-cards-cluster.burst-executed .step-burst-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.step-cards-cluster.burst-executed .step-burst-card:nth-child(2) {
+  animation-delay: 0.28s;
+}
+.step-cards-cluster.burst-executed .step-burst-card:nth-child(3) {
+  animation-delay: 0.46s;
+}
+.step-cards-cluster.burst-executed .step-burst-card:nth-child(4) {
+  animation-delay: 0.64s;
+}
+
+@keyframes flyOutFromCircle {
+  0% {
+    opacity: 0;
+    transform: translate(var(--burst-origin-x, -80px), var(--burst-origin-y, 0px)) scale(0.08);
+  }
+  60% {
+    opacity: 1;
+  }
+  85% {
+    transform: translate(0, 0) scale(1.03);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+    pointer-events: auto;
+  }
+}
+
+/* ==========================================================================
+   3. FACETAS GEOMÉTRICAS Y CORTES ANGULARES (ANGULAR CLIPS)
+   ========================================================================== */
+
+.clip-facet-corner {
+  clip-path: polygon(0 0, calc(100% - 20px) 0, 100% 20px, 100% 100%, 0 100%);
+}
+
+.clip-facet-both {
+  clip-path: polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px);
+}
+
+.clip-hex-badge {
+  clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+}
+
+.clip-triangle-flag {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 12px), 50% 100%, 0 calc(100% - 12px));
+}
+
+/* ==========================================================================
+   4. TARJETAS DE CONTRATOS GEOMÉTRICOS
+   ========================================================================== */
+
+.contract-geo-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 10px 30px -10px rgba(15, 23, 42, 0.08);
+  overflow: hidden;
+}
+
+.contract-geo-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 50px -12px rgba(15, 23, 42, 0.16);
+  border-color: #cbd5e1;
+}
+
+/* Contrato Destacado: Análisis de negocio */
+.contract-geo-featured {
+  background: linear-gradient(150deg, #0a0f1d 0%, #0f172a 60%, #1e1b4b 100%);
+  border: 2px solid #38bdf8;
+  color: #ffffff;
+  box-shadow: 0 20px 50px -10px rgba(15, 23, 42, 0.45),
+              0 0 25px rgba(56, 189, 248, 0.25);
+  transform: scale(1.03);
+  z-index: 2;
+}
+
+@media (max-width: 1023px) {
+  .contract-geo-featured {
+    transform: scale(1);
+  }
+}
+
+.contract-geo-featured:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 30px 60px -15px rgba(15, 23, 42, 0.6),
+              0 0 35px rgba(56, 189, 248, 0.35);
+  border-color: #7dd3fc;
+}
+
+/* ==========================================================================
+   5. BOTÓN FLOTANTE DE WHATSAPP GEOMÉTRICO
+   ========================================================================== */
+
+.wa-geo-btn {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 45;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
+}
+
+.wa-geo-btn:hover {
+  transform: scale(1.08) translateY(-4px);
+}
+
+.wa-pulse-hex {
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: rgba(16, 185, 129, 0.3);
+  animation: pulseGlow 2.4s infinite;
+  z-index: -1;
+}
+
+/* ==========================================================================
+   6. MALLA DE FONDO Y MICRO-TEXTURAS GEOMÉTRICAS
+   ========================================================================== */
+
+.bg-geo-grid-dark {
+  background-image: 
+    radial-gradient(rgba(56, 189, 248, 0.15) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 32px 32px, 64px 64px, 64px 64px;
+}
+
+.bg-geo-grid-light {
+  background-image: 
+    radial-gradient(rgba(99, 102, 241, 0.12) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(15, 23, 42, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(15, 23, 42, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px, 56px 56px, 56px 56px;
+}
+
+/* ==========================================================================
+   MOBILE REVIEWS SLIDER (1 DE ALTO A LA VEZ, ROTANDO A LA IZQUIERDA)
+   ========================================================================== */
+
+.mobile-reviews-track {
+  position: relative;
+  width: 100%;
+  min-height: 250px;
+  overflow: hidden;
+  border-radius: 20px;
+}
+
+.mobile-review-slide {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), 
+              opacity 0.65s ease;
+}
+
+.mobile-review-slide.is-active {
+  position: relative;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
+  z-index: 2;
+}
+
+.mobile-review-slide.is-exiting-left {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.mobile-review-slide.is-entering-right {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+}
+
+.mobile-review-slide.is-entering-left {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(-100%);
+  pointer-events: none;
+}
+
+.mobile-review-slide.is-exiting-right {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #94a3b8;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #64748b;
+}
