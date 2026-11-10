@@ -58,4 +58,4 @@ landing_page_D/
 
 - **Web3Forms:** Reemplazar `YOUR_ACCESS_KEY_HERE` en [index.html](file:///home/agusmango/Documentos/landing_pages/landing_page_D/index.html).
 - **Teléfono y WhatsApp:** `341 111 1111` / `5493411111111`.
-- **Email:** `ejemplo@mail.com`.
+- **Email:** `agusmango195@gmail.com`.

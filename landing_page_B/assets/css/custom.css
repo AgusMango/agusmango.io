@@ -1,0 +1,357 @@
+/* ==========================================================================
+   LANDING PAGE B - CUSTOM STYLES
+   Split-screen interactive layout with wheel slide transitions & mobile swipe
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400;1,600&display=swap');
+
+:root {
+  --brand-500: #0284c7;
+  --brand-600: #0369a1;
+  --brand-700: #075985;
+  --brand-900: #0f172a;
+  --accent-500: #10b981;
+}
+
+html, body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #0b1120;
+  color: #1e293b;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Custom Scrollbar for scrollable panels */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(241, 245, 249, 0.7);
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Glassmorphism Classes */
+.glass-badge {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.glass-pill {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+/* NAVBAR SYSTEM: DESKTOP AUTO-COLLAPSE TO THE RIGHT & HOVER EXPANSION */
+@media (min-width: 1024px) {
+  #main-navbar {
+    background: transparent;
+    border-bottom: 1px solid transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: background 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                border-color 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                backdrop-filter 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  /* Logo stays visible as a floating glass pill when collapsed */
+  #main-navbar .nav-brand {
+    background: rgba(15, 23, 42, 0.5);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: all 0.35s ease;
+  }
+
+  /* Expanded state on hover / top zone */
+  #main-navbar.navbar-expanded,
+  #main-navbar:hover {
+    background: rgba(15, 23, 42, 0.55);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+  }
+
+  #main-navbar.navbar-expanded .nav-brand,
+  #main-navbar:hover .nav-brand {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    padding-left: 0;
+  }
+
+  /* Collapsible right menu & buttons */
+  #navbar-collapsible {
+    opacity: 0;
+    transform: translateX(45px);
+    pointer-events: none;
+    transition: opacity 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+
+  #main-navbar.navbar-expanded #navbar-collapsible,
+  #main-navbar:hover #navbar-collapsible {
+    opacity: 1;
+    transform: translateX(0);
+    pointer-events: auto;
+  }
+}
+
+/* MOBILE NAVBAR */
+@media (max-width: 1023px) {
+  #main-navbar {
+    background: rgba(15, 23, 42, 0.7);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  }
+}
+
+/* DESKTOP SPLIT-SCREEN SYSTEM */
+@media (min-width: 1024px) {
+  body {
+    overflow: hidden;
+  }
+
+  .split-screen-container {
+    height: 100vh;
+    height: 100dvh;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .split-left-pane {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    background-color: #090d16;
+  }
+
+  .split-right-pane {
+    width: 50%;
+    height: 100%;
+    position: relative;
+    background-color: #ffffff;
+    box-shadow: -10px 0 35px rgba(0, 0, 0, 0.15);
+    z-index: 20;
+  }
+
+  /* Left Slides Transitions */
+  .left-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(1.04);
+    transition: opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1), transform 0.85s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.75s;
+    pointer-events: none;
+    z-index: 1;
+  }
+
+  .left-slide > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  .left-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: scale(1);
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  /* Right Content Panels Transitions */
+  .right-panel {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(24px);
+    transition: opacity 0.55s cubic-bezier(0.16, 1, 0.3, 1), transform 0.65s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.55s;
+    pointer-events: none;
+    overflow-y: auto;
+    z-index: 1;
+  }
+
+  .right-panel.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+    pointer-events: auto;
+    z-index: 2;
+  }
+}
+
+/* MOBILE SYSTEM */
+@media (max-width: 1023px) {
+  body {
+    overflow-y: auto;
+    background-color: #ffffff;
+  }
+
+  .split-screen-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+  }
+
+  /* Mobile Portada / Cover Slider */
+  .mobile-portada-wrapper {
+    position: relative;
+    width: 100%;
+    height: 62vh;
+    min-height: 380px;
+    max-height: 520px;
+    overflow: hidden;
+    background-color: #090d16;
+    touch-action: pan-y; /* Allows vertical scrolling while detecting horizontal swipe */
+  }
+
+  .mobile-cover-slide {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateX(100%);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, visibility 0.5s;
+    pointer-events: none;
+  }
+
+  .mobile-cover-slide > img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    z-index: 0;
+  }
+
+  .mobile-cover-slide.active {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+    pointer-events: auto;
+    z-index: 2;
+  }
+
+  .mobile-cover-slide.prev-slide {
+    transform: translateX(-100%);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  /* Mobile Content below Portada */
+  .mobile-content-wrapper {
+    width: 100%;
+    background-color: #ffffff;
+    position: relative;
+    z-index: 10;
+  }
+
+  .mobile-content-block {
+    display: none;
+    animation: fadeIn 0.4s ease-out forwards;
+  }
+
+  .mobile-content-block.active {
+    display: block;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Dots and Indicators */
+.section-dot {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.section-dot.active {
+  width: 2rem;
+  background-color: #38bdf8;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.7);
+}
+
+/* Soft pulse for WhatsApp button */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 16px rgba(37, 211, 102, 0);
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
+}
+
+.pulse-wa {
+  animation: pulse-ring 2.5s infinite;
+}
+
+/* Card hover micro-interactions */
+.interactive-card {
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.interactive-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 30px -10px rgba(15, 23, 42, 0.1);
+}
+
+/* Swipe hint bounce animation */
+@keyframes swipeHint {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(6px);
+  }
+}
+
+.animate-swipe-hint {
+  animation: swipeHint 1.8s ease-in-out infinite;
+}
